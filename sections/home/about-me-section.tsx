@@ -51,8 +51,8 @@ export default function AboutMeSection() {
         title="The developer"
         accentTitle="behind the work."
         titleClassName="text-balance"
-        subtitle="You'll work directly with me."
-        description="No unnecessary middlemen or complicated processes. Just clear communication, honest advice, and someone who takes your project seriously."
+        subtitle="You'll work directly with me, from start to finish."
+        description="From discussing your requirements to writing the code and handling changes, I'll be involved throughout the process."
         showButton={false}
       />
 

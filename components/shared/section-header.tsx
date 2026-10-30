@@ -36,7 +36,7 @@ export default function SectionHeader({
       className={
         centered
           ? "mx-auto max-w-4xl text-center"
-          : "grid gap-7 lg:grid-cols-[1.35fr_1fr] lg:items-end lg:gap-16"
+          : "grid gap-7 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-10 xl:gap-12"
       }
     >
       <div>
@@ -55,13 +55,13 @@ export default function SectionHeader({
         </div>
         <h2
           className={cn(
-            "font-heading text-[clamp(2.5rem,5.5vw,5.5rem)] leading-[1.04] font-semibold tracking-[-0.055em] text-heading",
+            "font-heading text-[clamp(2rem,4.5vw,4rem)] leading-[1.1] font-bold tracking-[-0.055em] text-heading uppercase",
             centered && "text-balance",
             titleClassName,
           )}
         >
           {title}
-          <span className="mt-2 block font-[Georgia,Times_New_Roman,serif] font-normal tracking-[-0.055em] italic">
+          <span className="mt-0.5 block font-[Georgia,Times_New_Roman,serif] text-[1.08em] leading-[1.1] font-normal tracking-[-0.055em] normal-case italic">
             {accentTitle}
           </span>
         </h2>
@@ -69,7 +69,7 @@ export default function SectionHeader({
       <div
         className={
           centered
-            ? "mx-auto mt-7 max-w-2xl sm:mt-9 max-md:mx-0 max-md:w-full max-md:max-w-lg max-md:border-l-[3px] max-md:border-border max-md:pl-5 max-md:text-left sm:max-md:pl-6"
+            ? "mx-auto mt-7 max-w-2xl sm:mt-9 md:mt-5 max-md:mx-0 max-md:w-full max-md:max-w-lg max-md:border-l-[3px] max-md:border-border max-md:pl-5 max-md:text-left sm:max-md:pl-6"
             : "max-w-lg border-l-[3px] border-border pl-5 sm:pl-6 lg:pb-1 lg:pl-7"
         }
       >

@@ -48,9 +48,8 @@ function CTASection() {
             id="cta-description"
             className="mt-6 max-w-[44ch] max-lg:w-full max-lg:max-w-none text-base leading-[1.8] text-sub-heading max-lg:font-medium max-lg:text-heading/90 sm:text-lg"
           >
-            Whether you&apos;re starting something new or improving what you
-            already have, tell me what you&apos;re working on. I&apos;ll help
-            you figure out the next step.
+            Tell me what you&apos;re working on or what you&apos;d like to improve. I&apos;ll
+            help you figure out the best way forward.
           </p>
           <Button
             onClick={() => setConnectModal(true)}

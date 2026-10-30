@@ -27,7 +27,7 @@ export const expertiseSectionData = [
     number: "01",
     title: "Websites, Apps & SaaS",
     description:
-      "I build custom websites, web apps, dashboards, and SaaS products tailored to your business and customers.",
+      "I build websites, web apps, and SaaS products that are easy to use and built around your business.",
     service: "Launch Your Idea or Improve Your Website",
     symbol: "growth",
     tone: "graphite",
@@ -37,7 +37,7 @@ export const expertiseSectionData = [
     number: "02",
     title: "AI & Business Automation",
     description:
-      "I automate repetitive tasks, connect your tools, and create AI assistants to handle leads, customer inquiries, and daily work.",
+      "I automate repetitive tasks, connect your tools, and build AI assistants to handle routine work.",
     service: "Save Time & Get More Done",
     symbol: "efficiency",
     tone: "secondary",
@@ -47,8 +47,8 @@ export const expertiseSectionData = [
     number: "03",
     title: "Backend, Cloud & Integrations",
     description:
-      "I handle servers, databases, APIs, and integrations so your apps run smoothly and your tools work together.",
-    service: "Keep Everything Running Reliably",
+      "I build and maintain APIs, databases, and cloud systems that keep your software running reliably.",
+    service: "Keep Your Systems Running Reliably",
     symbol: "revenue",
     tone: "muted",
   },
@@ -57,7 +57,7 @@ export const expertiseSectionData = [
     number: "04",
     title: "Cybersecurity & Protection",
     description:
-      "I find security weaknesses, strengthen logins, and secure applications and servers to help protect your business and data.",
+      "I find security weaknesses, strengthen access controls, and help protect your applications and data.",
     service: "Reduce Risks & Protect Your Data",
     symbol: "protection",
     tone: "accent",
@@ -72,7 +72,7 @@ export const aboutMeSectionData01 = [
     title: "Meet Hassan.",
     subtitle: "Your developer, from idea to launch.",
     description:
-      "I'm Hassan, a full-stack software engineer based in Pakistan. I work with founders and businesses to turn ideas into working software, handling everything from development to launch while keeping communication clear and simple.",
+      "I'm Hassan, a full-stack software engineer based in Pakistan. I work directly with founders, businesses, and teams to build software that solves real problems. I like keeping things straightforward: understanding what you need, being clear about what's possible, and making sure the work gets done properly.",
     tags: ["About"],
   },
   {
@@ -81,12 +81,12 @@ export const aboutMeSectionData01 = [
     title: "Where I've Worked",
     subtitle: "From writing code to leading projects.",
     description:
-      "I've worked with Prime Hieve Digital, Zevitech, EFU Life Insurance, and other companies & startups developing business software, AI automation, and internal tools. My roles have grown from hands-on development to leading projects and taking responsibility for delivery.",
+      "I've worked with Prime Hieve Digital, Zevitech, EFU Life Insurance, and other companies & startups. My experience goes beyond development I've worked with teams, handled client requirements, built business software, and taken responsibility for getting projects delivered.",
     descriptionHighlights: [
       "Prime Hieve Digital",
       "Zevitech",
       "EFU Life Insurance",
-      "other companies & startups",
+      "other companies & startups.",
     ],
     tags: ["Experience"],
   },
@@ -97,7 +97,7 @@ export const aboutMeSectionData01 = [
     title: "My Tech Stack",
     subtitle: "The tools I use to get things done.",
     description:
-      "I work with the technologies behind modern websites, SaaS products, AI automation, cloud infrastructure, and security, from development through deployment and ongoing maintenance.",
+      "I use the right tools for each project, from websites and AI automation to backend systems, cloud infrastructure, and security.",
     tags: ["Technology"],
   },
   {
@@ -106,7 +106,7 @@ export const aboutMeSectionData01 = [
     title: "How I Work.",
     subtitle: "No guesswork. No unnecessary complexity.",
     description:
-      "I take time to understand your goals, recommend what makes sense, and keep you involved throughout the project. My focus is on practical solutions, clear communication, and work you can rely on.",
+      "I start by understanding what you need, then explain the best approach before building. You'll know what's happening, what comes next, and where your project stands.",
     tags: ["Approach"],
   },
   // {
@@ -115,14 +115,14 @@ export const aboutMeSectionData01 = [
   //   title: "A Quick Hello.",
   //   subtitle: "Get to know me in 40 seconds.",
   //   description:
-  //     "A short video so you can put a face and voice to the person you might be working with.",
+  //     "A short introduction so you can put a face and voice to the developer you'll be working with.",
   //   tags: ["Video"],
   // },
 ] as const;
 
 export const aboutMeSectionData02 = [
   {
-    category: "Frontend Development",
+    category: "Frontend & Mobile Development",
     technologies: [
       "Next.js",
       "React",
@@ -139,7 +139,10 @@ export const aboutMeSectionData02 = [
       "React Native",
       "Flutter",
       "Expo",
-      "Progressive Web Apps (PWA)",
+      "PWA",
+      "iOS",
+      "Android",
+      "Figma",
     ],
   },
   {
@@ -152,12 +155,12 @@ export const aboutMeSectionData02 = [
       "FastAPI",
       "Laravel",
       "GraphQL",
-      "REST API",
+      "REST APIs",
       "WebSocket",
     ],
   },
   {
-    category: "Artificial Intelligence & LLMs",
+    category: "AI Models, Agents & LLMs",
     technologies: [
       "OpenAI",
       "Claude (Anthropic)",
@@ -175,11 +178,11 @@ export const aboutMeSectionData02 = [
     ],
   },
   {
-    category: "AI Automation & Workflow Platforms",
+    category: "Workflow Automation & Integrations",
     technologies: ["n8n", "Make", "Zapier"],
   },
   {
-    category: "Databases, Vector Databases & Search",
+    category: "Databases & Search",
     technologies: [
       "PostgreSQL",
       "MySQL",
@@ -193,7 +196,7 @@ export const aboutMeSectionData02 = [
     ],
   },
   {
-    category: "Cloud, Hosting & Infrastructure",
+    category: "Cloud & DevOps",
     technologies: [
       "Amazon Web Services (AWS)",
       "Google Cloud",
@@ -206,11 +209,6 @@ export const aboutMeSectionData02 = [
       "Kubernetes",
       "Nginx",
       "Linux",
-    ],
-  },
-  {
-    category: "DevOps, CI/CD & Infrastructure as Code",
-    technologies: [
       "Git",
       "GitHub",
       "GitLab",
@@ -218,7 +216,12 @@ export const aboutMeSectionData02 = [
       "Jenkins",
       "Terraform",
       "Ansible",
+      "SSH",
     ],
+  },
+  {
+    category: "Monitoring & Reliability",
+    technologies: ["Prometheus", "Grafana", "Sentry", "Zabbix", "Uptime Kuma"],
   },
   {
     category: "Cybersecurity & Penetration Testing",
@@ -233,19 +236,11 @@ export const aboutMeSectionData02 = [
     ],
   },
   {
-    category: "Monitoring, Observability & Reliability",
-    technologies: ["Prometheus", "Grafana", "Sentry", "Zabbix", "Uptime Kuma"],
-  },
-  {
-    category: "Mobile Development & Platforms",
-    technologies: ["iOS", "Android"],
-  },
-  {
-    category: "CMS, E-commerce & Website Platforms",
+    category: "CMS & E-commerce",
     technologies: ["WordPress", "WooCommerce", "Shopify"],
   },
   {
-    category: "Email Infrastructure & Delivery",
+    category: "Integrations & Business Systems",
     technologies: [
       "Zoho Mail",
       "Postfix",
@@ -253,27 +248,11 @@ export const aboutMeSectionData02 = [
       "Mailgun",
       "SendGrid",
       "Resend",
+      "Stripe",
+      "Twilio",
+      "Airtable",
+      "HubSpot",
+      "Salesforce",
     ],
-  },
-  {
-    category: "Payments, CRM & Business Integrations",
-    technologies: ["Stripe", "Twilio", "Airtable", "HubSpot", "Salesforce"],
-  },
-  {
-    category: "Design, Development & Productivity",
-    technologies: [
-      "Figma",
-      "VS Code",
-      "Notion",
-      "ClickUp",
-      "Slack",
-      "Linear",
-      "Trello",
-      "Discord",
-    ],
-  },
-  {
-    category: "Additional Tools & Protocols",
-    technologies: ["SSH", "Apple"],
   },
 ] as const;
