@@ -16,8 +16,8 @@ function ShowcaseSection() {
         title="Real projects."
         accentTitle="Real solutions."
         titleClassName="max-w-[13ch]"
-        subtitle="See what I can build for you or your business."
-        description="From web apps and AI tools to business automation, explore my work and see how I turn ideas and everyday problems into working products."
+        subtitle="See the problems I've solved."
+        description="Real projects, practical solutions, and a closer look at how I approach each build."
         showButton
         buttonProps={{ href: "/case-studies", text: "Explore Case Studies" }}
       />

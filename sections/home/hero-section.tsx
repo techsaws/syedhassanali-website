@@ -40,10 +40,9 @@ function HeroSection() {
         >
           <h1
             id="hero-title"
-            className="m-0 font-heading text-[clamp(25px,2.6vw,44px)] leading-[1.15] font-bold tracking-[-0.055em] text-[#f5f4ee] uppercase text-balance max-lg:max-w-145 max-lg:text-[clamp(26px,4vw,38px)] max-[640px]:max-w-95 max-[640px]:text-[clamp(25px,6.5vw,36px)]"
+            className="m-0 font-heading text-[clamp(25px,2.6vw,44px)] leading-[1.25] font-bold tracking-[-0.055em] text-[#f5f4ee] uppercase text-balance max-lg:max-w-145 max-lg:text-[clamp(26px,4vw,38px)] max-[640px]:max-w-95 max-[640px]:text-[clamp(25px,6.5vw,36px)]"
           >
-            I build software & systems
-            <br />
+            I build software & systems <br className="max-lg:hidden" />
             that help businesses
             <span className="mt-2 block font-[Georgia,Times_New_Roman,serif] text-[1.18em] leading-[1.12] font-normal tracking-[-0.055em] normal-case italic">
               grow, scale & stay secure.

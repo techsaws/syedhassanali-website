@@ -262,3 +262,19 @@ export function Header02() {
     </header>
   );
 }
+
+export function Header03() {
+  return (
+    <header className="w-full bg-[#050505] text-dth-heading">
+      <div className="page-layout flex min-h-20 items-center justify-center py-5 lg:min-h-24 lg:py-6">
+        <Link
+          href="/"
+          aria-label="Syed Hassan Ali home"
+          className="font-heading text-[clamp(24px,4vw,38px)] leading-[1.1] font-bold tracking-wide text-dth-heading uppercase transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+        >
+          Syed Hassan Ali
+        </Link>
+      </div>
+    </header>
+  );
+}

@@ -1,15 +1,42 @@
 import Link from "next/link";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { Header03 } from "@/components/layouts/headers";
+import Footer from "@/components/layouts/footer";
 
 export default function NotFound() {
   return (
-    <main className="page-layout flex min-h-[70dvh] flex-col items-start justify-center py-16">
-      <p className="mb-4 text-sm font-semibold text-sub-heading">404 - Page not found</p>
-      <h1 className="font-heading text-4xl font-semibold tracking-tight text-heading sm:text-5xl">Let&apos;s get you back on track.</h1>
-      <p className="mt-5 max-w-lg text-base leading-relaxed text-foreground">This page may have moved or the link may be incorrect. Explore my work or return to the home page.</p>
-      <div className="mt-7 flex flex-wrap gap-4">
-        <Link href="/" className="rounded-lg bg-secondary px-5 py-3 text-sm font-semibold text-secondary-foreground">Back to home</Link>
-        <Link href="/case-studies" className="rounded-lg border border-border px-5 py-3 text-sm font-semibold text-heading">Explore case studies</Link>
-      </div>
-    </main>
+    <div className="flex min-h-dvh flex-col">
+      <Header03 />
+      <main className="page-layout flex flex-1 flex-col items-center justify-center py-12 text-center md:py-18 lg:py-24">
+        <p className="mb-5 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.14em] text-sub-heading uppercase sm:text-sm">
+          <span className="rounded-md bg-primary px-2 py-1 leading-none text-primary-foreground">404</span>
+          Page not found
+        </p>
+        <h1 className="max-w-[20ch] font-heading text-[clamp(2.5rem,5.5vw,5.5rem)] leading-[1.04] font-semibold tracking-[-0.055em] text-heading text-balance">
+          Let&apos;s get you back on track.
+        </h1>
+        <p className="mt-5 max-w-lg text-base leading-[1.8] text-foreground sm:text-lg">
+          This page may have moved or the link may be incorrect. Explore my work
+          or return to the home page.
+        </p>
+        <div className="mt-7 flex w-full flex-col items-center justify-center gap-3 sm:mt-8 sm:w-auto sm:flex-row sm:gap-4">
+          <Link
+            href="/"
+            className="group/home inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-[10px] border border-border bg-background px-5 py-3 text-sm font-semibold text-heading transition-colors duration-200 hover:border-heading/25 hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:w-auto sm:text-base"
+          >
+            <ArrowLeft aria-hidden="true" className="size-4 transition-transform duration-200 motion-safe:group-hover/home:-translate-x-0.5 motion-reduce:transition-none" />
+            Back to home
+          </Link>
+          <Link
+            href="/case-studies"
+            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-[10px] bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors duration-200 hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:w-auto sm:text-base"
+          >
+            Explore case studies
+            <ArrowUpRight aria-hidden="true" className="size-4" />
+          </Link>
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 }
