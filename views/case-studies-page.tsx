@@ -13,17 +13,15 @@ export default function CaseStudiesPage({
       <PageIntroSection
         id="case-studies-title"
         title="Problems solved."
-        subtitle="Built to solve real problems."
-        description="Explore the software, automations, and systems I've built and see how they work."
+        subtitle="Real projects. Practical solutions."
+        description="Explore the software, automations, and systems I've built, the problems they solve, and how they work."
         phrases={[
-          "Systems built.",
-          "Work made easier.",
-          "Ideas realized.",
-          "Tasks automated.",
+          "Software built.",
+          "Work automated.",
+          "Problems solved.",
           "Products launched.",
         ]}
       />
-
       <FeaturedStudiesSection />
       <CollectionSection searchParams={searchParams} />
       <CTASection />
