@@ -5,7 +5,7 @@ import Footer from "@/components/layouts/footer";
 
 export default function NotFound() {
   return (
-    <div className="flex min-h-dvh flex-col">
+    <div className="flex min-h-svh flex-col">
       <Header03 />
       <main className="page-layout flex flex-1 flex-col items-center justify-center py-12 text-center md:py-18 lg:py-24">
         <p className="mb-5 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.14em] text-sub-heading uppercase sm:text-sm">
