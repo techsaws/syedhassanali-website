@@ -1,0 +1,34 @@
+.cursor {
+  display: inline-block;
+  margin-left: 0.06em;
+  color: var(--heading);
+  font-family: inherit;
+  font-size: 0.65em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  vertical-align: 0.04em;
+  transform: skewX(-10deg);
+  opacity: 1;
+}
+
+.cursor[data-idle="true"] {
+  animation: caret-blink 1s steps(1, end) infinite;
+}
+
+@keyframes caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cursor[data-idle="true"] {
+    animation: none;
+  }
+}
