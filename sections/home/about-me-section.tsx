@@ -7,7 +7,7 @@ import {
 
 import SectionHeader from "@/components/shared/section-header";
 
-import { Plus } from "lucide-react";
+import { MapPin, Plus } from "lucide-react";
 
 export default function AboutMeSection() {
   function HighlightedDescription({
@@ -71,7 +71,7 @@ export default function AboutMeSection() {
                 alt="Portrait of Hassan Ali"
                 fill
                 sizes="(max-width: 1023px) 460px, 40vw"
-                className="object-contain object-bottom brightness-90"
+                className="object-contain object-bottom"
               />
             )}
             <div
@@ -93,9 +93,9 @@ export default function AboutMeSection() {
               </p>
             </div>
             <span className="flex items-center gap-2 text-xs text-sub-heading sm:text-sm">
-              <span
+              <MapPin
                 aria-hidden="true"
-                className="size-2 rounded-full bg-primary"
+                className="size-4 shrink-0 text-primary"
               />
               Based in Pakistan
             </span>

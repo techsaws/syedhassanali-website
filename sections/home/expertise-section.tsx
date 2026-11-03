@@ -98,7 +98,7 @@ export default function ExpertiseSection() {
               {expertise.title}
             </h3>
 
-            <div className="mx-auto my-8 h-40 w-40 max-w-full text-primary sm:my-10 max-md:absolute max-md:top-6 max-md:right-6 max-md:m-0 max-md:size-36 max-md:opacity-[0.20] max-md:-z-10 max-md:pointer-events-none lg:h-44 lg:w-full lg:max-w-44">
+            <div className="mx-auto my-8 h-40 w-40 max-w-full text-[#FFCE00] sm:my-10 max-md:absolute max-md:top-6 max-md:right-6 max-md:m-0 max-md:size-36 max-md:opacity-[0.20] max-md:-z-10 max-md:pointer-events-none lg:h-44 lg:w-full lg:max-w-44">
               <ExpertiseSymbol symbol={expertise.symbol} />
             </div>
 
