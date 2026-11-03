@@ -7,7 +7,7 @@ import {
 
 import SectionHeader from "@/components/shared/section-header";
 
-import { MapPin, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 
 export default function AboutMeSection() {
   function HighlightedDescription({
@@ -93,9 +93,12 @@ export default function AboutMeSection() {
               </p>
             </div>
             <span className="flex items-center gap-2 text-xs text-sub-heading sm:text-sm">
-              <MapPin
-                aria-hidden="true"
-                className="size-4 shrink-0 text-primary"
+              <Image
+                src="/icons/pin.png"
+                alt=""
+                width={20}
+                height={20}
+                className="size-5 shrink-0 object-contain"
               />
               Based in Pakistan
             </span>
