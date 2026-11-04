@@ -10,7 +10,8 @@ import { Button } from "@/components/ui/button";
 
 import homeHeroImage from "../../public/images/home-hero.png";
 import scrollDownIcon from "../../public/icons/scroll-down.png";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { socialLinks } from "@/configs/social-links";
+import { ArrowRight, ArrowUpRight, Instagram } from "lucide-react";
 import styles from "@/styles/sections/home.sections.module.css";
 
 function HeroSection() {
@@ -38,6 +39,25 @@ function HeroSection() {
         <div
           className={`${styles.copy} absolute top-[46%] left-[clamp(28px,4vw,64px)] w-[min(48%,640px)] max-lg:relative max-lg:top-auto max-lg:left-auto max-lg:mx-7 max-lg:mt-2 max-lg:w-auto max-lg:pb-7 max-[640px]:mx-6`}
         >
+          <nav aria-label="Social profiles" className="mb-5 flex flex-wrap items-center gap-1 sm:mb-6 sm:gap-2">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${social.name} (opens in a new tab)`}
+                title={social.name}
+                className="flex size-10 shrink-0 items-center justify-center rounded-lg text-white transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:size-11"
+              >
+                {social.icon ? (
+                  <Image src={social.icon} alt="" width={24} height={24} className="size-6 object-contain" />
+                ) : (
+                  <Instagram aria-hidden="true" className="size-6" />
+                )}
+              </a>
+            ))}
+          </nav>
           <h1
             id="hero-title"
             className="m-0 font-heading text-[clamp(25px,2.6vw,44px)] leading-[1.25] font-bold tracking-[-0.055em] text-[#f5f4ee] uppercase text-balance max-lg:max-w-145 max-lg:text-[clamp(26px,4vw,38px)] max-[640px]:max-w-95 max-[640px]:text-[clamp(25px,6.5vw,36px)]"
