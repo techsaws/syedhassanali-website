@@ -23,6 +23,7 @@ function HeroSection() {
         id="hero"
         className="relative isolate h-[calc(100svh-48px)] min-h-170 overflow-hidden rounded-[18px] bg-[#050505] lg:@container-size max-lg:h-auto max-lg:min-h-0 max-lg:pt-24 max-lg:pb-6 max-[640px]:rounded-xl"
       >
+        <div className="relative lg:contents">
         <Image
           src={homeHeroImage}
           alt="Syed Hassan Ali"
@@ -32,14 +33,7 @@ function HeroSection() {
           preload
           className={`${styles.image} absolute right-0 bottom-0 h-auto w-[min(100cqw,200cqh)] max-w-none max-lg:relative max-lg:right-auto max-lg:bottom-auto max-lg:h-[clamp(280px,52vw,440px)] max-lg:w-full max-lg:object-cover max-lg:object-[78%_center]`}
         />
-        <div
-          className="absolute inset-0 bg-[linear-gradient(90deg,rgb(0_0_0/35%),transparent_65%)] max-lg:bg-none"
-          aria-hidden="true"
-        />
-        <div
-          className={`${styles.copy} absolute top-[46%] left-[clamp(28px,4vw,64px)] w-[min(48%,640px)] max-lg:relative max-lg:top-auto max-lg:left-auto max-lg:mx-7 max-lg:mt-2 max-lg:w-auto max-lg:pb-7 max-[640px]:mx-6`}
-        >
-          <nav aria-label="Social profiles" className="mb-5 flex flex-wrap items-center gap-1 sm:mb-6 sm:gap-2">
+          <nav aria-label="Social profiles" className="absolute inset-y-3 left-6 z-10 flex flex-col justify-center gap-1 md:left-7 md:gap-2 lg:hidden">
             {socialLinks.map((social) => (
               <a
                 key={social.name}
@@ -48,14 +42,43 @@ function HeroSection() {
                 rel="noopener noreferrer"
                 aria-label={`${social.name} (opens in a new tab)`}
                 title={social.name}
-                className="flex size-10 shrink-0 items-center justify-center rounded-lg text-white transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:size-11"
+                className="flex size-6 shrink-0 items-center justify-center rounded-lg text-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] motion-safe:hover:-translate-y-1 motion-safe:focus-visible:-translate-y-1 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:size-8"
               >
                 <Image
                   src={social.icon}
                   alt=""
-                  width={24}
-                  height={24}
-                  className="size-6 object-contain"
+                  width={36}
+                  height={36}
+                  className="size-5 object-contain md:size-7"
+                />
+              </a>
+            ))}
+          </nav>
+        </div>
+        <div
+          className="absolute inset-0 bg-[linear-gradient(90deg,rgb(0_0_0/35%),transparent_65%)] max-lg:bg-none"
+          aria-hidden="true"
+        />
+        <div
+          className={`${styles.copy} absolute top-[46%] left-[clamp(28px,4vw,64px)] w-[min(48%,640px)] max-lg:relative max-lg:top-auto max-lg:left-auto max-lg:mx-7 max-lg:mt-17 md:max-lg:mt-19 max-lg:w-auto max-lg:pb-7 max-[640px]:mx-6`}
+        >
+          <nav aria-label="Social profiles" className="mb-5 hidden lg:flex flex-wrap items-center gap-2 sm:mb-6 sm:gap-3">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${social.name} (opens in a new tab)`}
+                title={social.name}
+                className="flex size-10 shrink-0 items-center justify-center rounded-lg text-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] motion-safe:hover:-translate-y-1 motion-safe:focus-visible:-translate-y-1 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:size-11"
+              >
+                <Image
+                  src={social.icon}
+                  alt=""
+                  width={36}
+                  height={36}
+                  className="size-9 object-contain"
                 />
               </a>
             ))}
