@@ -29,7 +29,7 @@ export const expertiseSectionData = [
     description:
       "I build websites, web apps, and SaaS products that are easy to use and built around your business.",
     service: "Launch Your Idea or Improve Your Website",
-    symbol: "growth",
+    image: "/icons/terminal.svg",
     tone: "graphite",
   },
   {
@@ -39,7 +39,7 @@ export const expertiseSectionData = [
     description:
       "I automate repetitive tasks, connect your tools, and build AI assistants to handle routine work.",
     service: "Save Time & Get More Done",
-    symbol: "efficiency",
+    image: "/icons/microchip.svg",
     tone: "secondary",
   },
   {
@@ -49,7 +49,7 @@ export const expertiseSectionData = [
     description:
       "I build and maintain APIs, databases, and cloud systems that keep your software running reliably.",
     service: "Keep Your Systems Running Reliably",
-    symbol: "revenue",
+    image: "/icons/database.svg",
     tone: "muted",
   },
   {
@@ -59,7 +59,7 @@ export const expertiseSectionData = [
     description:
       "I find security weaknesses, strengthen access controls, and help protect your applications and data.",
     service: "Reduce Risks & Protect Your Data",
-    symbol: "protection",
+    image: "/icons/shield.svg",
     tone: "accent",
   },
 ] as const;

@@ -1,14 +1,14 @@
 export const headerNavLinks = [
   { label: "My Work", href: "#projects" },
   { label: "What I Do", href: "#expertise" },
-  { label: "How I Solved It", href: "/case-studies" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "About Me", href: "#about" },
 ] as const;
 
 export const footerNavLinks = [
   { label: "My Work", href: "#projects" },
   { label: "What I Do", href: "#expertise" },
-  { label: "How I Solved It", href: "/case-studies" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "About Me", href: "#about" },
 ] as const;
 

@@ -1,6 +1,8 @@
 "use client";
 
 import { useRef, useState, type SubmitEvent } from "react";
+import Image from "next/image";
+import { socialLinks } from "@/configs/social-links";
 
 import { useGlobalContext } from "@/contexts/global-context";
 
@@ -42,7 +44,7 @@ export default function ContactModal() {
     (link) => link.label === "Call",
   )?.href;
   const optionClass =
-    "group flex w-full items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4 text-left transition-colors hover:border-primary/40 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:p-5";
+    "group flex w-full items-center gap-4 rounded-xl border border-white/10 bg-white/5 p-4 text-left transition-colors hover:bg-white/10 focus-visible:bg-white/10 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 sm:p-5";
 
   async function requestResume(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -100,11 +102,11 @@ export default function ContactModal() {
         showCloseButton={false}
         overlayClassName="fixed inset-0 z-50 bg-black/60 backdrop-blur-md transition-opacity duration-200 data-ending-style:opacity-0 data-starting-style:opacity-0 motion-reduce:transition-none"
         data-lenis-prevent
-        className="fixed top-1/2 left-1/2 z-50 max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-3xl border border-white/15 bg-dth-card p-6 text-white shadow-[0_24px_100px_rgba(0,0,0,0.45)] outline-none transition-[opacity,scale] duration-200 data-ending-style:scale-95 data-ending-style:opacity-0 data-starting-style:scale-95 data-starting-style:opacity-0 motion-reduce:transition-none sm:p-8"
+        className="fixed top-1/2 left-1/2 z-50 max-h-[calc(100dvh-2rem)] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-3xl border border-white/15 bg-dth-card p-6 text-white shadow-[0_24px_100px_rgba(0,0,0,0.45)] outline-none focus:outline-none focus:ring-0 focus:ring-offset-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 transition-[opacity,scale] duration-200 data-ending-style:scale-95 data-ending-style:opacity-0 data-starting-style:scale-95 data-starting-style:opacity-0 motion-reduce:transition-none sm:p-8"
       >
         <DialogClose
           aria-label="Close contact dialog"
-          className="absolute top-4 right-4 grid size-10 place-items-center rounded-full text-white/65 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-primary"
+          className="absolute top-4 right-4 grid size-10 place-items-center rounded-full text-white/65 transition-colors hover:bg-white/10 hover:text-white focus-visible:bg-white/10 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
         >
           <X className="size-5" />
         </DialogClose>
@@ -120,7 +122,7 @@ export default function ContactModal() {
             <ArrowLeft className="size-4" /> Back
           </button>
         )}
-        <p className="mb-3 text-xs font-semibold tracking-[0.14em] text-primary uppercase">
+        <p className="mb-3 text-xs font-semibold tracking-[0.14em] text-[#FFCE00] uppercase">
           {step === "options" ? "Let's connect" : "Resume request"}
         </p>
         <DialogTitle className="pr-8 text-dth-heading font-heading text-3xl leading-tight font-semibold tracking-[-0.035em] sm:text-4xl">
@@ -201,6 +203,27 @@ export default function ContactModal() {
                 className="size-5 text-white/60"
               />
             </button>
+            <div className="!mt-6 border-t border-dth-border pt-5 sm:!mt-7 sm:pt-6">
+              <p className="mb-4 text-sm font-medium text-dth-foreground">Find me online</p>
+              <nav aria-label="Social profiles">
+                <ul className="grid grid-cols-3 gap-x-2 gap-y-3 sm:gap-x-3">
+                  {socialLinks.map((social) => (
+                    <li key={social.name} className="min-w-0">
+                      <a
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${social.name} (opens in a new tab)`}
+                        className="flex min-h-18 flex-col items-center justify-center gap-2 rounded-lg px-1 py-2 text-xs font-medium text-dth-heading transition-colors hover:bg-white/10 focus-visible:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FFCE00]"
+                      >
+                        <Image src={social.icon} alt="" width={28} height={28} className="size-7 shrink-0 object-contain" />
+                        <span>{social.name}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
           </div>
         ) : (
           <form onSubmit={requestResume} className="mt-7" aria-busy={sending}>

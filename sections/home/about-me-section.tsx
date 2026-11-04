@@ -113,7 +113,7 @@ export default function AboutMeSection() {
               className={`py-8 first:pt-0 last:pb-0 sm:py-10 ${index > 0 ? "border-t-2 border-border" : ""}`}
             >
               <div className="mb-4 flex items-center gap-3">
-                <span className="inline-flex shrink-0 items-center rounded-md bg-primary px-2 py-1 text-xs leading-none font-semibold text-primary-foreground tabular-nums">
+                <span className="inline-flex shrink-0 items-center rounded-md bg-[#FFCE00] px-2 py-1 text-xs leading-none font-semibold text-black tabular-nums">
                   {panel.number}
                 </span>
                 <span

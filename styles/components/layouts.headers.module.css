@@ -47,3 +47,19 @@
     position: fixed;
   }
 }
+
+@media (768px <= width < 1024px) {
+  .hero {
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .hero::before {
+    opacity: 0;
+  }
+
+  .hero:has([aria-expanded="true"]) {
+    background-color: rgb(10 10 10 / 96%);
+  }
+}

@@ -77,7 +77,10 @@ export function HeaderContent({ compact = false }: { compact?: boolean }) {
         className={`pointer-events-auto min-w-0 font-heading leading-[1.1] font-bold tracking-wide text-dth-heading uppercase ${compact ? "text-[clamp(18px,2vw,28px)]" : "text-[clamp(26px,2.1vw,38px)] max-[640px]:text-[clamp(20px,5vw,24px)]"}`}
         aria-label="Syed Hassan Ali home"
       >
-        Syed Hassan Ali
+        <span className="block">Syed Hassan Ali</span>
+        <span className={`mt-1.5 block font-sans leading-snug font-medium tracking-[0.01em] normal-case text-white/85 ${compact ? "text-[11px] sm:text-xs" : "text-[clamp(12px,1vw,17px)] max-md:text-[11px]"}`}>
+          Full-Stack Software Engineer
+        </span>
       </Link>
       <nav
         className={`pointer-events-auto flex shrink-0 items-center max-lg:hidden ${compact ? "gap-6 xl:gap-9" : "gap-[clamp(24px,3vw,48px)]"}`}
@@ -90,9 +93,10 @@ export function HeaderContent({ compact = false }: { compact?: boolean }) {
             <li key={href}>
               <a
                 href={href.startsWith("#") ? `/${href}` : href}
-                className={`inline-block py-3 font-semibold tracking-[0.01em] text-dth-heading transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary ${compact ? "text-base" : "text-[clamp(16px,1.1vw,20px)]"}`}
+                className={`group/nav relative inline-block py-3 font-semibold tracking-[0.01em] text-dth-heading focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary ${compact ? "text-base" : "text-[clamp(16px,1.1vw,20px)]"}`}
               >
                 {label}
+                <span aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-1 h-1 origin-left scale-x-0 rounded-full bg-[#FFCE00] transition-transform duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/nav:scale-x-100 group-focus-visible/nav:scale-x-100 motion-reduce:transition-none" />
               </a>
             </li>
           ))}
@@ -116,16 +120,16 @@ export function HeaderContent({ compact = false }: { compact?: boolean }) {
         aria-expanded={menuOpen}
         aria-controls={menuOpen ? menuId : undefined}
         aria-label={menuOpen ? "Close navigation" : "Open navigation"}
-        className="pointer-events-auto grid size-12 shrink-0 place-items-center rounded-[10px] border border-white/20 bg-transparent text-dth-heading transition-colors hover:border-white/40 hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary lg:hidden"
+        className="pointer-events-auto grid size-12 max-md:size-10 shrink-0 place-items-center rounded-[10px] border border-white/20 bg-transparent text-dth-heading transition-colors hover:border-white/40 hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary lg:hidden"
       >
         <motion.span
           animate={{ rotate: menuOpen ? 90 : 0 }}
           transition={{ type: "spring", stiffness: 420, damping: 24 }}
         >
           {menuOpen ? (
-            <X aria-hidden="true" className="size-5" strokeWidth={2.5} />
+            <X aria-hidden="true" className="size-5 max-md:size-4.5" strokeWidth={2.5} />
           ) : (
-            <Menu aria-hidden="true" className="size-5" strokeWidth={2.5} />
+            <Menu aria-hidden="true" className="size-5 max-md:size-4.5" strokeWidth={2.5} />
           )}
         </motion.span>
       </button>
@@ -146,7 +150,7 @@ export function HeaderContent({ compact = false }: { compact?: boolean }) {
             <nav
               aria-label="Mobile navigation"
               data-lenis-prevent
-              className="mt-5 max-h-[calc(100dvh-200px)] overflow-y-auto overscroll-contain border-t border-white/10 pt-5 pb-3 sm:mt-6 sm:pt-6"
+              className="mt-5 max-h-[calc(100dvh-200px)] overflow-y-auto overscroll-contain border-t border-white/10 pt-5 pb-3 sm:mt-6 sm:pt-6 max-md:mt-3 max-md:pt-3 max-md:max-h-[calc(100dvh-112px)]"
             >
               <ul className="space-y-1">
                 {headerNavLinks.map(({ label, href }, index) => (
@@ -162,9 +166,11 @@ export function HeaderContent({ compact = false }: { compact?: boolean }) {
                     <a
                       href={href.startsWith("#") ? `/${href}` : href}
                       onClick={() => setMenuOpen(false)}
-                      className="flex items-center justify-between rounded-lg px-2 py-4 font-heading text-xl font-semibold text-dth-heading transition-colors hover:bg-white/5 hover:text-primary focus-visible:outline-2 focus-visible:outline-primary"
+                      className="flex items-center justify-between rounded-lg px-2 py-4 font-heading text-xl font-semibold text-dth-heading group/nav transition-colors hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-primary"
                     >
-                      {label}
+                      <span className="relative inline-block">{label}
+                        <span aria-hidden="true" className="pointer-events-none absolute inset-x-0 -bottom-2 h-1 origin-left scale-x-0 rounded-full bg-[#FFCE00] transition-transform duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/nav:scale-x-100 group-focus-visible/nav:scale-x-100 motion-reduce:transition-none" />
+                      </span>
                       <ArrowUpRight
                         aria-hidden="true"
                         className="size-4 text-white/50"
@@ -217,7 +223,7 @@ export function Header01() {
   return (
     <>
       <header
-        className={`${styles.hero} bg-[#050505] pointer-events-none absolute inset-x-6 top-6 z-40 flex flex-wrap items-center justify-between gap-x-6 gap-y-0 rounded-2xl p-[clamp(28px,4vw,64px)] max-[640px]:inset-x-3 max-[640px]:top-3 max-[640px]:px-6 max-[640px]:py-7`}
+        className={`${styles.hero} bg-[#050505] lg:bg-transparent pointer-events-none absolute inset-x-6 top-6 z-40 flex flex-wrap items-center justify-between gap-x-6 gap-y-0 rounded-2xl p-[clamp(28px,4vw,64px)] max-[640px]:inset-x-3 max-[640px]:top-3 max-md:top-3 max-md:px-6 max-lg:py-6`}
       >
         <HeaderContent />
       </header>
@@ -256,7 +262,7 @@ export function Header02() {
     <header
       className={`${styles.glass} sticky top-0 left-0 z-40 w-full bg-[#050505] shadow-[0_4px_20px_rgba(0,0,0,0.10)]`}
     >
-      <div className="page-layout flex min-h-20 flex-wrap items-center justify-between gap-x-4 gap-y-0 py-4 lg:min-h-24 lg:py-5">
+      <div className="page-layout flex min-h-20 flex-wrap items-center justify-between gap-x-4 gap-y-0 py-4 max-md:min-h-16 max-md:py-3 lg:min-h-24 lg:py-5">
         <HeaderContent compact />
       </div>
     </header>
