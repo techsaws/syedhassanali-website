@@ -21,7 +21,9 @@ function HeroSection() {
         id="hero"
         className={`relative isolate h-[calc(100svh-48px)] min-h-170 overflow-hidden rounded-[18px] bg-[#050505] lg:@container-size max-md:h-auto max-md:min-h-0 md:max-lg:h-[clamp(600px,72svh,720px)] md:max-lg:min-h-150 md:max-lg:pt-0 max-md:pt-24 md:max-lg:pb-0 max-md:pb-6 max-[640px]:rounded-xl`}
       >
-        <div className={`relative max-md:overflow-hidden md:max-lg:absolute md:max-lg:inset-0 lg:contents`}>
+        <div
+          className={`relative max-md:overflow-hidden md:max-lg:absolute md:max-lg:inset-0 lg:contents`}
+        >
           <Image
             src={homeHeroImage}
             alt="Syed Hassan Ali"
@@ -112,7 +114,7 @@ function HeroSection() {
             <Button
               onClick={() => setConnectModal(true)}
               variant="outline"
-              className="h-auto min-h-12.5 gap-2.5 rounded-[10px] px-4.5 py-3 text-base leading-[1.4] font-semibold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring max-md:min-h-10 max-md:gap-2 max-md:px-3 max-md:py-2.5 max-md:text-xs border-dth-input bg-transparent text-dth-heading hover:border-dth-muted-foreground hover:bg-dth-accent hover:text-dth-accent-foreground"
+              className="h-auto min-h-12.5 gap-2.5 rounded-[10px] px-4.5 py-3 text-base leading-[1.4] font-semibold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring max-md:min-h-10 max-md:gap-2 max-md:px-3 max-md:py-2.5 max-md:text-xs border-[#FFCE00] border-2 bg-transparent text-[#FFCE00] hover:border-[#FFCE00] hover:bg-dth-accent hover:text-[#FFCE00]"
             >
               Let&apos;s Talk{" "}
               <ArrowRight

@@ -78,7 +78,7 @@ export function HeaderContent({ compact = false }: { compact?: boolean }) {
         aria-label="Syed Hassan Ali home"
       >
         <span className="block">Syed Hassan Ali</span>
-        <span className={`mt-1.5 block font-sans leading-snug font-medium tracking-[0.01em] normal-case text-white/85 ${compact ? "text-[11px] sm:text-xs" : "text-[clamp(12px,1vw,17px)] max-md:text-[11px]"}`}>
+        <span className={`mt-1.5 block font-sans leading-snug font-medium tracking-[0.01em] normal-case text-[#FFCE00] ${compact ? "text-[11px] sm:text-xs" : "text-[clamp(12px,1vw,17px)] max-md:text-[11px]"}`}>
           Full-Stack Software Engineer
         </span>
       </Link>

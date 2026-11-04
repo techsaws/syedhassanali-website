@@ -3,6 +3,8 @@
 import { createContext, useContext, type Dispatch, type SetStateAction } from "react";
 
 export type GlobalContextValue = {
+  contactStep: "options" | "resume";
+  setContactStep: Dispatch<SetStateAction<"options" | "resume">>;
   connectModal: boolean;
   setConnectModal: Dispatch<SetStateAction<boolean>>;
 };

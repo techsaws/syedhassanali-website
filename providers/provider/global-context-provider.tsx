@@ -17,9 +17,10 @@ export default function GlobalContextProvider({
   children: ReactNode;
 }) {
   const [connectModal, setConnectModal] = useState(false);
+  const [contactStep, setContactStep] = useState<"options" | "resume">("options");
   const value = useMemo<GlobalContextValue>(
-    () => ({ connectModal, setConnectModal }),
-    [connectModal],
+    () => ({ connectModal, setConnectModal, contactStep, setContactStep }),
+    [connectModal, contactStep],
   );
 
   return (

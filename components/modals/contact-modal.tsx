@@ -29,8 +29,7 @@ import {
 } from "lucide-react";
 
 export default function ContactModal() {
-  const { connectModal, setConnectModal } = useGlobalContext();
-  const [step, setStep] = useState<"options" | "resume">("options");
+  const { connectModal, setConnectModal, contactStep: step, setContactStep: setStep } = useGlobalContext();
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [sending, setSending] = useState(false);
@@ -122,7 +121,7 @@ export default function ContactModal() {
             <ArrowLeft className="size-4" /> Back
           </button>
         )}
-        <p className="mb-3 text-xs font-semibold tracking-[0.14em] text-[#FFCE00] uppercase">
+        <p className={`mb-3 text-xs font-semibold tracking-[0.14em] uppercase ${step === "options" ? "text-primary" : "text-[#FFCE00]"}`}>
           {step === "options" ? "Let's connect" : "Resume request"}
         </p>
         <DialogTitle className="pr-8 text-dth-heading font-heading text-3xl leading-tight font-semibold tracking-[-0.035em] sm:text-4xl">
@@ -141,7 +140,7 @@ export default function ContactModal() {
               <a href={emailLink} className={optionClass}>
                 <Mail
                   aria-hidden="true"
-                  className="size-6 shrink-0 text-primary"
+                  className="size-6 shrink-0 text-[#FFCE00]"
                   strokeWidth={1.75}
                 />
                 <span className="min-w-0 flex-1">
@@ -162,7 +161,7 @@ export default function ContactModal() {
               <a href={phoneLink} className={optionClass}>
                 <Phone
                   aria-hidden="true"
-                  className="size-6 shrink-0 text-primary"
+                  className="size-6 shrink-0 text-[#FFCE00]"
                   strokeWidth={1.75}
                 />
                 <span className="flex-1">
@@ -187,7 +186,7 @@ export default function ContactModal() {
             >
               <Download
                 aria-hidden="true"
-                className="size-6 shrink-0 text-primary"
+                className="size-6 shrink-0 text-[#FFCE00]"
                 strokeWidth={1.75}
               />
               <span className="flex-1">
