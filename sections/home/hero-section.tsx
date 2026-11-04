@@ -9,9 +9,9 @@ import { useGlobalContext } from "@/contexts/global-context";
 import { Button } from "@/components/ui/button";
 
 import homeHeroImage from "../../public/images/home-hero.png";
-import scrollDownIcon from "../../public/icons/scroll-down.png";
+import scrollDownIcon from "../../public/icons/scroll.svg";
 import { socialLinks } from "@/configs/social-links";
-import { ArrowRight, ArrowUpRight, Instagram } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import styles from "@/styles/sections/home.sections.module.css";
 
 function HeroSection() {
@@ -50,11 +50,13 @@ function HeroSection() {
                 title={social.name}
                 className="flex size-10 shrink-0 items-center justify-center rounded-lg text-white transition-colors hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:size-11"
               >
-                {social.icon ? (
-                  <Image src={social.icon} alt="" width={24} height={24} className="size-6 object-contain" />
-                ) : (
-                  <Instagram aria-hidden="true" className="size-6" />
-                )}
+                <Image
+                  src={social.icon}
+                  alt=""
+                  width={24}
+                  height={24}
+                  className="size-6 object-contain"
+                />
               </a>
             ))}
           </nav>
