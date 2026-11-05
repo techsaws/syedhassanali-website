@@ -19,7 +19,7 @@ export default function IntroSection({ study }: { study: ICaseStudyDetail }) {
         <div>
           <div className="mb-5 flex flex-wrap items-center gap-2 text-xs font-semibold">
             <span className="rounded-md bg-primary px-3 py-1.5 text-primary-foreground">{study.detail.eyebrow}</span>
-            {study.project && <span className="rounded-md bg-muted px-3 py-1.5 text-sub-heading">{study.project}</span>}
+            {study.project && <span className="rounded-md bg-[#FFCE00] px-3 py-1.5 text-black">{study.project}</span>}
             {study.featured && <span className="px-1 text-sub-heading">Featured case study</span>}
           </div>
           <h1 className="max-w-[22ch] font-heading text-[clamp(2.25rem,5vw,4.75rem)] leading-[1.06] font-semibold tracking-[-0.055em] text-heading text-balance">{study.detail.heroTitle || study.title}</h1>
@@ -27,7 +27,7 @@ export default function IntroSection({ study }: { study: ICaseStudyDetail }) {
         <div className="border-l-[3px] border-border pl-5 sm:pl-6 lg:pl-7">
           <p className="max-w-[48ch] text-base leading-[1.8] text-foreground sm:text-lg">{study.detail.heroDescription || study.description}</p>
           <ul aria-label="Project technologies" className="mt-5 flex flex-wrap gap-2">
-            {study.technologies.map((technology) => <li key={technology} className="rounded-md border border-border bg-card px-2.5 py-1 text-xs font-medium text-sub-heading">{technology}</li>)}
+            {study.technologies.map((technology) => <li key={technology} className="rounded-md bg-slate-200/70 px-2.5 py-1 text-xs font-medium text-slate-700">{technology}</li>)}
           </ul>
         </div>
       </div>

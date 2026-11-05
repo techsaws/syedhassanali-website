@@ -61,7 +61,7 @@ export default function ApproachSection({
             {detail.workflow.steps.map((step, index) => (
               <li key={step.step}>
                 <div className="flex items-start gap-4">
-                  <span className="grid size-8 shrink-0 place-items-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+                  <span className="grid size-8 shrink-0 place-items-center rounded-full bg-[#FFCE00] text-xs font-bold text-black">
                     {String(step.step).padStart(2, "0")}
                   </span>
                   <span className="pt-1 text-sm leading-relaxed">
@@ -113,7 +113,7 @@ export default function ApproachSection({
             {detail.implementation.technicalFocus.map((item) => (
               <li
                 key={item}
-                className="rounded-md border border-border bg-card px-3 py-1.5 text-xs text-sub-heading"
+                className="rounded-md bg-slate-200/70 px-3 py-1.5 text-xs text-slate-700"
               >
                 {item}
               </li>

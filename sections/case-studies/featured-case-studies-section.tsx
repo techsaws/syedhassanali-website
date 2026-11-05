@@ -74,7 +74,7 @@ function FeaturedStudiesSection() {
                   exit={{ opacity: 0 }}
                   transition={{ duration: reducedMotion ? 0 : 0.2 }}
                 >
-                  <span className="mb-4 inline-block rounded-md bg-white/10 px-2.5 py-1 text-xs font-medium text-dth-heading">
+                  <span className="mb-4 inline-block rounded-md bg-[#FFCE00] px-2.5 py-1 text-xs font-medium text-black">
                     {study.category}
                   </span>
                   <h2 className="max-w-[19ch] font-heading text-[clamp(1.75rem,3.3vw,3.25rem)] leading-[1.12] font-semibold tracking-[-0.04em] text-dth-heading">

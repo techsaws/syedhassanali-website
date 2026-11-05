@@ -13,8 +13,8 @@ export default function CaseStudiesPage({
       <PageIntroSection
         id="case-studies-title"
         title="Problems solved."
-        subtitle="Real projects. Practical solutions."
-        description="Explore the software, automations, and systems I've built, the problems they solve, and how they work."
+        subtitle="Software built to solve real problems."
+        description="Explore the websites, software, and automations I've built and see how they work."
         phrases={[
           "Software built.",
           "Work automated.",

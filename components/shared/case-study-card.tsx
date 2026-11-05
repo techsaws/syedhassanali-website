@@ -23,7 +23,7 @@ export default function CaseStudyCard({ study }: { study: ICaseStudy }) {
             {study.category}
           </span>
           {study.project && (
-            <span className="rounded-md bg-slate-200/70 px-2.5 py-1 text-xs leading-snug font-medium text-slate-700">
+            <span className="rounded-md bg-[#FFCE00] px-2.5 py-1 text-xs leading-snug font-medium text-black">
               {study.project}
             </span>
           )}
@@ -43,7 +43,7 @@ export default function CaseStudyCard({ study }: { study: ICaseStudy }) {
           {study.technologies.map((technology) => (
             <li
               key={technology}
-              className="rounded-md bg-card px-2.5 py-1 text-xs leading-snug font-medium text-sub-heading ring-1 ring-inset ring-border"
+              className="rounded-md bg-slate-200/70 px-2.5 py-1 text-xs leading-snug font-medium text-slate-700"
             >
               {technology}
             </li>

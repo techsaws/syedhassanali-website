@@ -54,123 +54,6 @@ export type ICaseStudy = {
   featured: boolean;
 };
 
-export const CaseStudiesData: readonly ICaseStudy[] = [
-  {
-    id: 1,
-    slug: "lead-follow-up-automation",
-    project: "LeadFlow",
-    title: "Stop losing leads after the first inquiry",
-    description:
-      "Capture every inquiry, assign the right person, and follow up without relying on someone to remember.",
-    category: "AI & Automation",
-    technologies: ["n8n", "Next.js", "PostgreSQL", "SMTP", "Webhooks"],
-    image: CaseStudy01ImageA,
-    featured: true,
-  },
-  {
-    id: 2,
-    slug: "n8n-business-workflow",
-    project: "FlowBridge",
-    title: "Connect your tools so your team stops copying data",
-    description:
-      "Use n8n to move information between apps, trigger tasks, and keep everyday work moving.",
-    category: "AI & Automation",
-    technologies: [
-      "n8n",
-      "Webhooks",
-      "REST APIs",
-      "PostgreSQL",
-      "Google Sheets",
-    ],
-    image: CaseStudy02ImageA,
-    featured: true,
-  },
-  {
-    id: 3,
-    slug: "ai-support-assistant",
-    project: "AnswerDesk",
-    title: "Answer common customer questions without adding more tickets",
-    description:
-      "Help customers find accurate answers from approved company information, with a clear handoff when AI is unsure.",
-    category: "AI & Automation",
-    technologies: ["Python", "OpenAI API", "RAG", "Vector Search", "n8n"],
-    image: CaseStudy03ImageA,
-    featured: true,
-  },
-  {
-    id: 4,
-    slug: "invoice-document-processing",
-    project: "InvoiceFlow",
-    title: "Turn invoices and PDFs into usable data",
-    description:
-      "Extract key fields, check them, and send approved records into the tools your team already uses.",
-    category: "AI & Automation",
-    technologies: ["Python", "OCR", "n8n", "PostgreSQL", "REST APIs"],
-    image: CaseStudy04ImageA,
-    featured: false,
-  },
-  {
-    id: 5,
-    slug: "client-project-portal",
-    project: "ClientSpace",
-    title: "Give clients one place to see what is happening",
-    description:
-      "Replace scattered status emails with a secure portal for requests, files, updates, and approvals.",
-    category: "Web Apps & SaaS",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "PostgreSQL",
-      "Authentication",
-      "Object Storage",
-    ],
-    image: CaseStudy05ImageA,
-    featured: false,
-  },
-  {
-    id: 6,
-    slug: "saas-mvp-launch",
-    project: "LaunchKit",
-    title: "Turn a product idea into software people can actually use",
-    description:
-      "Build the essential user journey first, then launch with the foundations needed to learn and grow.",
-    category: "Web Apps & SaaS",
-    technologies: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Stripe"],
-    image: CaseStudy06ImageA,
-    featured: false,
-  },
-  {
-    id: 7,
-    slug: "crm-api-integration",
-    project: "SyncLayer",
-    title: "Make your CRM and business apps stay in sync",
-    description:
-      "Connect customer records, updates, and events across systems without constant CSV exports.",
-    category: "Backend & Cloud",
-    technologies: ["Node.js", "REST APIs", "Webhooks", "PostgreSQL", "n8n"],
-    image: CaseStudy07ImageA,
-    featured: false,
-  },
-  {
-    id: 8,
-    slug: "booking-reminder-automation",
-    project: "BookPilot",
-    title: "Let customers book without endless messages",
-    description:
-      "Make appointments easier to schedule, confirm, reschedule, and follow up on automatically.",
-    category: "AI & Automation",
-    technologies: [
-      "n8n",
-      "Calendar APIs",
-      "Next.js",
-      "Email APIs",
-      "PostgreSQL",
-    ],
-    image: CaseStudy08ImageA,
-    featured: false,
-  },
-];
-
 export type CaseStudyScreenshot = {
   heading: string;
   screenshot: string | StaticImageData | null;
@@ -221,9 +104,9 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
     id: 1,
     slug: "lead-follow-up-automation",
     project: "LeadFlow",
-    title: "Stop losing leads after the first inquiry",
+    title: "Keeping new leads from getting lost",
     description:
-      "Capture every inquiry, assign the right person, and follow up without relying on someone to remember.",
+      "I built a system that collects inquiries, assigns them to the right person, and tracks follow-ups.",
     category: "AI & Automation",
     technologies: ["n8n", "Next.js", "PostgreSQL", "SMTP", "Webhooks"],
     image: CaseStudy01ImageA,
@@ -231,24 +114,24 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
 
     detail: {
       eyebrow: "AI & Automation",
-      heroTitle: "Stop losing leads after the first inquiry",
+      heroTitle: "Keeping new leads from getting lost",
       heroDescription:
-        "Capture every inquiry, assign the right person, and follow up without relying on someone to remember.",
+        "I built a system that collects inquiries, assigns them to the right person, and tracks follow-ups.",
       atAGlance: {
         problem:
-          "New inquiries arrive from different places, sit unanswered, and disappear into inboxes or spreadsheets.",
+          "New inquiries were spread across forms, emails, and spreadsheets, making it hard to know who needed a reply.",
         solution:
-          "A lead operations system that captures inquiries, removes duplicates, routes leads, and records follow-up activity.",
+          "I brought lead capture, assignment, and follow-up tracking into one workflow.",
         outcome:
-          "Every test inquiry was processed and logged successfully.",
+          "In a controlled test with 100 sample inquiries, every inquiry was captured and assigned.",
       },
       challenge: {
-        heading: "What was getting in the way?",
-        body: "New inquiries arrive from different places, sit unanswered, and disappear into inboxes or spreadsheets.",
+        heading: "The problem",
+        body: "When inquiries arrive in different places, a team can lose track of who has replied and who needs to follow up.",
       },
       solution: {
-        heading: "What did I build?",
-        body: "A lead operations system that captures inquiries, removes duplicates, routes leads, and records follow-up activity.",
+        heading: "What I built",
+        body: "I brought lead capture, assignment, and follow-up tracking into one workflow.",
       },
       capabilities: {
         heading: "What the system handles",
@@ -291,41 +174,41 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
         ],
       },
       businessValue: {
-        heading: "Why this matters",
+        heading: "Why it matters",
         items: [
-          "Fewer inquiries forgotten",
-          "Clear ownership of each lead",
-          "More consistent response process",
+          "A clear owner for each inquiry",
+          "Follow-ups visible in one place",
+          "Fewer manual checks across inboxes",
         ],
       },
       implementation: {
-        heading: "How I approached it",
-        body: "I connected lead capture, CRM, and automated follow-ups into one system that reduces manual work, prevents duplicates, and keeps every opportunity on track.",
+        heading: "How I built it",
+        body: "I connected incoming forms and email events to a shared lead record. Duplicate checks, ownership rules, and reply-aware follow-ups help the team keep track of each inquiry.",
         technicalFocus: ["n8n", "Next.js", "PostgreSQL", "SMTP"],
       },
       proof: {
-        heading: "See it in action",
+        heading: "Inside the project",
         screenshots: [
           {
-            heading: "Every Lead Captured in One Place",
+            heading: "Incoming inquiries in one view",
             screenshot: CaseStudy01ImageB,
           },
           {
-            heading: "Automated Follow-Ups, No Missed Opportunities",
+            heading: "Follow-up schedule and reply status",
             screenshot: CaseStudy01ImageC,
           },
           {
-            heading: "Track Email Delivery and Resolve Failures",
+            heading: "Email delivery and failed sends",
             screenshot: CaseStudy01ImageD,
           },
           {
-            heading: "From Manual Work to Automated Lead Management",
+            heading: "Lead assignment workflow",
             screenshot: CaseStudy01ImageE,
           },
         ],
       },
       results: {
-        heading: "What changed?",
+        heading: "What works now",
         verifiedMetrics: [
           {
             value: "100%",
@@ -341,28 +224,27 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
           },
         ],
         verifiedOutcome:
-          "Every test inquiry was processed and logged successfully.",
+          "In a controlled test with 100 sample inquiries, every inquiry was captured and assigned.",
         measurementNotes:
           "Measured using 100 sample inquiries in a controlled test environment. Results reflect system testing, not client business performance.",
         fallbackCopy:
-          "The system's working capabilities are demonstrated above; quantified client results are not published.",
+          "In a controlled test with 100 sample inquiries, every inquiry was captured and assigned.",
       },
       faq: [
         {
-          question:
-            "Can you make sure every new lead gets a reply and follow-up?",
+          question: "How does the system avoid duplicate leads?",
           answer:
-            "Yes. A connected intake and follow-up workflow can log the inquiry, alert the right person, and schedule the next action.",
+            "It checks incoming contact details against existing records before creating or updating a lead.",
         },
         {
-          question: "Will this work with our existing tools?",
+          question: "What happens when someone replies?",
           answer:
-            "That depends on available APIs, access permissions, data quality, and workflow rules. I would check those before committing to a specific integration.",
+            "Follow-up rules can stop the scheduled sequence when a reply is detected.",
         },
         {
-          question: "What would you need from us to get started?",
+          question: "Can it work with our current CRM?",
           answer:
-            "A short walkthrough of the current process, the tools involved, the main bottleneck, and what success would look like.",
+            "Possibly. I would check the CRM API, data fields, and access permissions first.",
         },
       ],
     },
@@ -371,7 +253,7 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
       title:
         "Lead Follow-Up Automation for Service Businesses | Syed Hassan Ali",
       description:
-        "Capture every inquiry, assign the right person, and follow up without relying on someone to remember.",
+        "I built a system that collects inquiries, assigns them to the right person, and tracks follow-ups.",
       keywords: [
         "lead follow up automation",
         "automated lead management",
@@ -391,9 +273,9 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
     id: 2,
     slug: "n8n-business-workflow",
     project: "FlowBridge",
-    title: "Connect your tools so your team stops copying data",
+    title: "Making business tools work together",
     description:
-      "Use n8n to move information between apps, trigger tasks, and keep everyday work moving.",
+      "I connected everyday apps so information moves between them without repeated copying and pasting.",
     category: "AI & Automation",
     technologies: [
       "n8n",
@@ -407,24 +289,24 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
 
     detail: {
       eyebrow: "AI & Automation",
-      heroTitle: "Connect your tools so your team stops copying data",
+      heroTitle: "Making business tools work together",
       heroDescription:
-        "Use n8n to move information between apps, trigger tasks, and keep everyday work moving.",
+        "I connected everyday apps so information moves between them without repeated copying and pasting.",
       atAGlance: {
         problem:
-          "Staff copy the same information across tools and chase routine updates manually.",
+          "Teams were entering the same information into multiple apps and checking updates by hand.",
         solution:
-          "A set of documented automations that connects existing systems and handles repetitive steps with human approval where needed.",
+          "I built n8n workflows that move data between apps, apply rules, and flag exceptions for review.",
         outcome:
-          "Connected business tools now exchange data automatically, reducing repetitive work and keeping operations moving.",
+          "The workflows demonstrate automated transfers, task routing, and approval steps between connected tools.",
       },
       challenge: {
-        heading: "What was getting in the way?",
-        body: "Staff copy the same information across tools and chase routine updates manually.",
+        heading: "The problem",
+        body: "Copying records between apps takes time and makes it easy to miss an update or enter the wrong value.",
       },
       solution: {
-        heading: "What did I build?",
-        body: "A set of documented automations that connects existing systems and handles repetitive steps with human approval where needed.",
+        heading: "What I built",
+        body: "I built n8n workflows that move data between apps, apply rules, and flag exceptions for review.",
       },
       capabilities: {
         heading: "What the system handles",
@@ -467,78 +349,63 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
         ],
       },
       businessValue: {
-        heading: "Why this matters",
+        heading: "Why it matters",
         items: [
-          "Less manual re-entry",
+          "Less repeated data entry",
           "Fewer missed handoffs",
-          "Better visibility into workflow failures",
+          "Failed runs easier to investigate",
         ],
       },
       implementation: {
-        heading: "How I approached it",
-        body: "I connected business tools using n8n, APIs, and webhooks to automate data transfers, reduce manual tasks, and keep workflows running reliably.",
+        heading: "How I built it",
+        body: "I used n8n, webhooks, and APIs to connect existing tools. Each workflow checks incoming data, handles repeat events, and records failures so they can be reviewed.",
         technicalFocus: ["n8n", "Webhooks", "REST APIs", "PostgreSQL"],
       },
       proof: {
-        heading: "See it in action",
+        heading: "Inside the project",
         screenshots: [
           {
-            heading: "Business Workflows Running Automatically",
+            heading: "Workflow runs and connected steps",
             screenshot: CaseStudy02ImageB,
           },
           {
-            heading: "Track Every Task and Resolve Failures",
+            heading: "Execution history and failures",
             screenshot: CaseStudy02ImageC,
           },
           {
-            heading: "All Your Business Tools Connected",
+            heading: "Connected apps and data mapping",
             screenshot: CaseStudy02ImageD,
           },
           {
-            heading: "Less Manual Work, Faster Operations",
+            heading: "Automated handoff between tools",
             screenshot: CaseStudy02ImageE,
           },
         ],
       },
       results: {
-        heading: "What changed?",
-        verifiedMetrics: [
-          {
-            value: "100%",
-            label: "Test workflows completed",
-          },
-          {
-            value: "100%",
-            label: "Data transfers automated",
-          },
-          {
-            value: "< 5s",
-            label: "Workflow processing time",
-          },
-        ],
-        verifiedOutcome:
-          "Connected business tools now exchange data automatically, reducing repetitive work and keeping operations moving.",
+        heading: "What works now",
+        verifiedMetrics: [],
+        verifiedOutcome: null,
         measurementNotes:
-          "Metrics must be validated through controlled workflow tests before publication. Processing time depends on connected APIs and workflow complexity.",
+          "No verified performance or client-impact metrics are available for publication. The screenshots show implemented workflows, not measured business results.",
         fallbackCopy:
-          "FlowBridge automates data transfers, task routing, and notifications across connected business tools.",
+          "The workflows demonstrate automated transfers, task routing, and approval steps between connected tools.",
       },
       faq: [
         {
-          question:
-            "Can you connect the apps we already use instead of building another system?",
+          question: "Do we need to replace our existing apps?",
           answer:
-            "Often, yes. Existing apps can be connected through APIs, webhooks, and n8n workflows, with checks for failures and duplicate events.",
+            "Not necessarily. If the apps expose suitable APIs or webhooks, I can connect them without replacing them.",
         },
         {
-          question: "Will this work with our existing tools?",
+          question: "What happens when a workflow fails?",
           answer:
-            "That depends on available APIs, access permissions, data quality, and workflow rules. I would check those before committing to a specific integration.",
+            "Failures are logged, and eligible steps can retry or be sent for review.",
         },
         {
-          question: "What would you need from us to get started?",
+          question: "Can a person approve sensitive changes?",
           answer:
-            "A short walkthrough of the current process, the tools involved, the main bottleneck, and what success would look like.",
+            "Yes. An approval step can pause the workflow before an action is completed.",
         },
       ],
     },
@@ -547,7 +414,7 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
       title:
         "n8n Business Workflow Automation & Integrations | Syed Hassan Ali",
       description:
-        "Use n8n to move information between apps, trigger tasks, and keep everyday work moving.",
+        "I connected everyday apps so information moves between them without repeated copying and pasting.",
       keywords: [
         "n8n automation expert",
         "connect business apps",
@@ -567,9 +434,9 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
     id: 3,
     slug: "ai-support-assistant",
     project: "AnswerDesk",
-    title: "Answer common customer questions without adding more tickets",
+    title: "Helping customers find answers without waiting",
     description:
-      "Help customers find accurate answers from approved company information, with a clear handoff when AI is unsure.",
+      "I built an AI support assistant that uses company information and hands uncertain questions to a person.",
     category: "AI & Automation",
     technologies: ["Python", "OpenAI API", "RAG", "Vector Search", "n8n"],
     image: CaseStudy03ImageA,
@@ -577,24 +444,24 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
 
     detail: {
       eyebrow: "AI & Automation",
-      heroTitle: "Answer common customer questions without adding more tickets",
+      heroTitle: "Helping customers find answers without waiting",
       heroDescription:
-        "Help customers find accurate answers from approved company information, with a clear handoff when AI is unsure.",
+        "I built an AI support assistant that uses company information and hands uncertain questions to a person.",
       atAGlance: {
         problem:
-          "Support teams answer the same questions repeatedly while customers wait for straightforward information.",
+          "Support staff were answering the same questions repeatedly while customers waited for basic information.",
         solution:
-          "A knowledge-grounded support assistant with retrieval, guardrails, conversation history, and a human escalation path.",
+          "I built an assistant that searches approved documents, answers with sources, and routes uncertain requests to support.",
         outcome:
-          "Customers get faster answers to common questions, while complex requests are routed to human support.",
+          "The assistant demonstrates document-based answers, source references, and a human handoff path.",
       },
       challenge: {
-        heading: "What was getting in the way?",
-        body: "Support teams answer the same questions repeatedly while customers wait for straightforward information.",
+        heading: "The problem",
+        body: "Common questions take up support time, but an AI assistant also needs to know when not to guess.",
       },
       solution: {
-        heading: "What did I build?",
-        body: "A knowledge-grounded support assistant with retrieval, guardrails, conversation history, and a human escalation path.",
+        heading: "What I built",
+        body: "I built an assistant that searches approved documents, answers with sources, and routes uncertain requests to support.",
       },
       capabilities: {
         heading: "What the system handles",
@@ -637,77 +504,63 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
         ],
       },
       businessValue: {
-        heading: "Why this matters",
+        heading: "Why it matters",
         items: [
-          "Faster access to routine answers",
-          "Less repetitive work for support teams",
-          "Clearer escalation for complex cases",
+          "Routine questions handled from approved content",
+          "Human support for uncertain requests",
+          "Unanswered questions visible for review",
         ],
       },
       implementation: {
-        heading: "How I approached it",
-        body: "I built an AI assistant that uses company knowledge to answer customer questions, reduce repetitive support work, and hand complex requests to the right team.",
+        heading: "How I built it",
+        body: "I connected a searchable knowledge base to the assistant and added source references, conversation history, and escalation rules. Uncertain answers can be reviewed by a person.",
         technicalFocus: ["Python", "OpenAI API", "RAG", "Vector Search"],
       },
       proof: {
-        heading: "See it in action",
+        heading: "Inside the project",
         screenshots: [
           {
-            heading: "Instant Answers from Company Knowledge",
+            heading: "Answering a question from the knowledge base",
             screenshot: CaseStudy03ImageB,
           },
           {
-            heading: "Smart Answers with Human Handoff",
+            heading: "Escalating a conversation to support",
             screenshot: CaseStudy03ImageC,
           },
           {
-            heading: "Reliable Answers Backed by Sources",
+            heading: "Source references beside answers",
             screenshot: CaseStudy03ImageD,
           },
           {
-            heading: "Track Answer Quality and Accuracy",
+            heading: "Reviewing feedback and unanswered questions",
             screenshot: CaseStudy03ImageE,
           },
         ],
       },
       results: {
-        heading: "What changed?",
-        verifiedMetrics: [
-          {
-            value: "24/7",
-            label: "AI support availability",
-          },
-          {
-            value: "< 5s",
-            label: "Average response time",
-          },
-          {
-            value: "90%",
-            label: "FAQ answer accuracy",
-          },
-        ],
-        verifiedOutcome:
-          "Customers get faster answers to common questions, while complex requests are routed to human support.",
+        heading: "What works now",
+        verifiedMetrics: [],
+        verifiedOutcome: null,
         measurementNotes:
-          "Response time and answer accuracy require validation through controlled testing with approved knowledge-base questions.",
+          "No verified performance or client-impact metrics are available for publication. The screenshots show implemented workflows, not measured business results.",
         fallbackCopy:
-          "AnswerDesk provides instant knowledge-based answers, automated support, and human escalation when needed.",
+          "The assistant demonstrates document-based answers, source references, and a human handoff path.",
       },
       faq: [
         {
-          question: "Can AI answer our FAQs without making things up?",
+          question: "Can the assistant make up an answer?",
           answer:
-            "It can answer from an approved knowledge base, cite relevant sources, and escalate uncertain or sensitive questions to a person.",
+            "AI can still make mistakes. The system uses approved sources and escalation rules to reduce unsupported answers, not guarantee perfect accuracy.",
         },
         {
-          question: "Will this work with our existing tools?",
+          question: "What happens when it cannot answer?",
           answer:
-            "That depends on available APIs, access permissions, data quality, and workflow rules. I would check those before committing to a specific integration.",
+            "It can create a handoff for a support agent with the conversation context.",
         },
         {
-          question: "What would you need from us to get started?",
+          question: "Can we update its information?",
           answer:
-            "A short walkthrough of the current process, the tools involved, the main bottleneck, and what success would look like.",
+            "Yes. Approved documents can be updated and reindexed so the assistant uses the latest available content.",
         },
       ],
     },
@@ -716,7 +569,7 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
       title:
         "AI Customer Support Assistant with Knowledge Retrieval | Syed Hassan Ali",
       description:
-        "Help customers find accurate answers from approved company information, with a clear handoff when AI is unsure.",
+        "I built an AI support assistant that uses company information and hands uncertain questions to a person.",
       keywords: [
         "AI customer support chatbot",
         "RAG support assistant",
@@ -736,9 +589,9 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
     id: 4,
     slug: "invoice-document-processing",
     project: "InvoiceFlow",
-    title: "Turn invoices and PDFs into usable data",
+    title: "Taking the manual work out of invoices",
     description:
-      "Extract key fields, check them, and send approved records into the tools your team already uses.",
+      "I built a workflow that reads invoice details, checks the data, and sends uncertain records for review.",
     category: "AI & Automation",
     technologies: ["Python", "OCR", "n8n", "PostgreSQL", "REST APIs"],
     image: CaseStudy04ImageA,
@@ -746,24 +599,24 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
 
     detail: {
       eyebrow: "AI & Automation",
-      heroTitle: "Turn invoices and PDFs into usable data",
+      heroTitle: "Taking the manual work out of invoices",
       heroDescription:
-        "Extract key fields, check them, and send approved records into the tools your team already uses.",
+        "I built a workflow that reads invoice details, checks the data, and sends uncertain records for review.",
       atAGlance: {
         problem:
-          "Invoices, forms, and attachments require repeated manual entry, review, and filing.",
+          "Invoice details had to be copied from PDFs into other systems and checked manually.",
         solution:
-          "A document intake pipeline that extracts structured fields, validates them, and routes records for review or downstream entry.",
+          "I built a document-processing workflow that extracts fields, checks them, and prepares records for approval.",
         outcome:
-          "Invoices are converted into structured, validated records faster, reducing repetitive work and speeding up approvals.",
+          "The workflow demonstrates invoice extraction, validation, and review before records are exported.",
       },
       challenge: {
-        heading: "What was getting in the way?",
-        body: "Invoices, forms, and attachments require repeated manual entry, review, and filing.",
+        heading: "The problem",
+        body: "Reading every invoice by hand is repetitive, especially when layouts differ or important fields are missing.",
       },
       solution: {
-        heading: "What did I build?",
-        body: "A document intake pipeline that extracts structured fields, validates them, and routes records for review or downstream entry.",
+        heading: "What I built",
+        body: "I built a document-processing workflow that extracts fields, checks them, and prepares records for approval.",
       },
       capabilities: {
         heading: "What the system handles",
@@ -806,78 +659,63 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
         ],
       },
       businessValue: {
-        heading: "Why this matters",
+        heading: "Why it matters",
         items: [
-          "Less repetitive typing",
-          "More consistent data capture",
-          "Better traceability for approvals",
+          "Less retyping of invoice details",
+          "Exceptions visible before export",
+          "A record of review decisions",
         ],
       },
       implementation: {
-        heading: "How I approached it",
-        body: "I combined Python, OCR, and automated workflows to extract invoice data, validate records, and streamline approvals, reducing manual entry and processing time.",
+        heading: "How I built it",
+        body: "I used Python and OCR to extract invoice fields, then added checks for missing values, duplicates, and inconsistent totals. Records that need attention go to a review step.",
         technicalFocus: ["Python", "OCR", "n8n", "PostgreSQL"],
       },
       proof: {
-        heading: "See it in action",
+        heading: "Inside the project",
         screenshots: [
           {
-            heading: "From Invoices to Organized Data",
+            heading: "Invoice fields extracted into records",
             screenshot: CaseStudy04ImageB,
           },
           {
-            heading: "Catch Errors Before They Cost You",
+            heading: "Missing or inconsistent values flagged",
             screenshot: CaseStudy04ImageC,
           },
           {
-            heading: "Faster Approvals, Complete Visibility",
+            heading: "Review and approval queue",
             screenshot: CaseStudy04ImageD,
           },
           {
-            heading: "Track Extraction Accuracy and Performance",
+            heading: "Extraction results and processing history",
             screenshot: CaseStudy04ImageE,
           },
         ],
       },
       results: {
-        heading: "What changed?",
-        verifiedMetrics: [
-          {
-            value: "95%",
-            label: "Data extraction accuracy",
-          },
-          {
-            value: "< 10s",
-            label: "Document processing time",
-          },
-          {
-            value: "80%",
-            label: "Less manual data entry",
-          },
-        ],
-        verifiedOutcome:
-          "Invoices are converted into structured, validated records faster, reducing repetitive work and speeding up approvals.",
+        heading: "What works now",
+        verifiedMetrics: [],
+        verifiedOutcome: null,
         measurementNotes:
-          "Illustrative performance targets. Extraction accuracy, processing speed, and manual effort reduction must be validated through controlled document testing.",
+          "No verified performance or client-impact metrics are available for publication. The screenshots show implemented workflows, not measured business results.",
         fallbackCopy:
-          "InvoiceFlow automates document extraction, validation, and approvals to reduce manual processing.",
+          "The workflow demonstrates invoice extraction, validation, and review before records are exported.",
       },
       faq: [
         {
-          question:
-            "Can you pull information from invoices and put it into our system?",
+          question: "Will it read every invoice correctly?",
           answer:
-            "Yes, with document extraction, field validation, exception handling, and human review for uncertain values.",
+            "No extraction system is perfect. Low-confidence fields and inconsistent totals should be reviewed before export.",
         },
         {
-          question: "Will this work with our existing tools?",
+          question: "Can it handle different invoice layouts?",
           answer:
-            "That depends on available APIs, access permissions, data quality, and workflow rules. I would check those before committing to a specific integration.",
+            "It can be configured for multiple layouts, but representative samples are needed to test accuracy.",
         },
         {
-          question: "What would you need from us to get started?",
+          question: "Where does approved data go?",
           answer:
-            "A short walkthrough of the current process, the tools involved, the main bottleneck, and what success would look like.",
+            "Approved records can be exported to a spreadsheet or integrated with an ERP or other system.",
         },
       ],
     },
@@ -885,7 +723,7 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
     seo: {
       title: "Invoice & Document Data Extraction Automation | Syed Hassan Ali",
       description:
-        "Extract key fields, check them, and send approved records into the tools your team already uses.",
+        "I built a workflow that reads invoice details, checks the data, and sends uncertain records for review.",
       keywords: [
         "invoice data extraction automation",
         "AI PDF processing",
@@ -905,9 +743,9 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
     id: 5,
     slug: "client-project-portal",
     project: "ClientSpace",
-    title: "Give clients one place to see what is happening",
+    title: "Keeping clients and projects on the same page",
     description:
-      "Replace scattered status emails with a secure portal for requests, files, updates, and approvals.",
+      "I built a client portal for project updates, shared files, requests, and approvals.",
     category: "Web Apps & SaaS",
     technologies: [
       "Next.js",
@@ -921,24 +759,24 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
 
     detail: {
       eyebrow: "Web Apps & SaaS",
-      heroTitle: "Give clients one place to see what is happening",
+      heroTitle: "Keeping clients and projects on the same page",
       heroDescription:
-        "Replace scattered status emails with a secure portal for requests, files, updates, and approvals.",
+        "I built a client portal for project updates, shared files, requests, and approvals.",
       atAGlance: {
         problem:
-          "Clients chase updates and teams lose context across email threads, spreadsheets, and chat.",
+          "Project details were scattered across emails and messages, making updates and approvals difficult to follow.",
         solution:
-          "A branded client workspace for requests, project status, documents, approvals, and notifications.",
+          "I built a shared workspace with separate client and team access to project information.",
         outcome:
-          "Clients can track progress, access files, and approve requests from one secure portal, reducing unnecessary communication and keeping projects organized.",
+          "The portal brings project status, files, requests, and approval history into one interface.",
       },
       challenge: {
-        heading: "What was getting in the way?",
-        body: "Clients chase updates and teams lose context across email threads, spreadsheets, and chat.",
+        heading: "The problem",
+        body: "Clients need to know what is happening without asking for another status update, while teams need a reliable record of decisions.",
       },
       solution: {
-        heading: "What did I build?",
-        body: "A branded client workspace for requests, project status, documents, approvals, and notifications.",
+        heading: "What I built",
+        body: "I built a shared workspace with separate client and team access to project information.",
       },
       capabilities: {
         heading: "What the system handles",
@@ -977,16 +815,16 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
         ],
       },
       businessValue: {
-        heading: "Why this matters",
+        heading: "Why it matters",
         items: [
-          "Fewer status-chasing emails",
-          "A clearer client experience",
-          "More organized delivery records",
+          "Project updates in one place",
+          "Fewer scattered file requests",
+          "Approvals easier to trace",
         ],
       },
       implementation: {
-        heading: "How I approached it",
-        body: "I built a secure client portal that brings project updates, file sharing, requests, and approvals into one place, reducing back-and-forth communication and keeping everyone aligned.",
+        heading: "How I built it",
+        body: "I built role-based access, project views, file sharing, and approval flows. Activity history keeps requests and decisions attached to the right project.",
         technicalFocus: [
           "Next.js",
           "TypeScript",
@@ -995,56 +833,42 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
         ],
       },
       proof: {
-        heading: "See it in action",
+        heading: "Inside the project",
         screenshots: [
           {
-            heading: "Manage Projects and Clients in One Place",
+            heading: "Project overview and client workspace",
             screenshot: CaseStudy05ImageB,
           },
           {
-            heading: "Secure Access for Clients and Teams",
+            heading: "Client and staff access permissions",
             screenshot: CaseStudy05ImageC,
           },
         ],
       },
       results: {
-        heading: "What changed?",
-        verifiedMetrics: [
-          {
-            value: "100%",
-            label: "Project updates centralized",
-          },
-          {
-            value: "24/7",
-            label: "Client access to project status",
-          },
-          {
-            value: "100%",
-            label: "Approvals tracked in one place",
-          },
-        ],
-        verifiedOutcome:
-          "Clients can track progress, access files, and approve requests from one secure portal, reducing unnecessary communication and keeping projects organized.",
+        heading: "What works now",
+        verifiedMetrics: [],
+        verifiedOutcome: null,
         measurementNotes:
-          "Centralization and approval tracking should be validated through workflow testing. Availability refers to intended access, not measured uptime.",
+          "No verified performance or client-impact metrics are available for publication. The screenshots show implemented workflows, not measured business results.",
         fallbackCopy:
-          "ClientSpace centralizes project updates, file sharing, requests, and approvals in one secure workspace.",
+          "The portal brings project status, files, requests, and approval history into one interface.",
       },
       faq: [
         {
-          question: "Can our clients log in and see their project status?",
+          question: "Can clients see only their own projects?",
           answer:
-            "Yes. A role-based client portal can show progress, collect requests, centralize files, and keep an activity history.",
+            "The portal uses role-based access rules to restrict project and file visibility.",
         },
         {
-          question: "Will this work with our existing tools?",
+          question: "Can clients approve work in the portal?",
           answer:
-            "That depends on available APIs, access permissions, data quality, and workflow rules. I would check those before committing to a specific integration.",
+            "Yes. Approval actions can be recorded with the relevant project and activity history.",
         },
         {
-          question: "What would you need from us to get started?",
+          question: "Can it match our existing process?",
           answer:
-            "A short walkthrough of the current process, the tools involved, the main bottleneck, and what success would look like.",
+            "The project stages, roles, and approval steps can be adapted after reviewing your workflow.",
         },
       ],
     },
@@ -1053,7 +877,7 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
       title:
         "Custom Client Portal for Agencies and B2B Services | Syed Hassan Ali",
       description:
-        "Replace scattered status emails with a secure portal for requests, files, updates, and approvals.",
+        "I built a client portal for project updates, shared files, requests, and approvals.",
       keywords: [
         "client portal development",
         "customer project tracking portal",
@@ -1073,9 +897,9 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
     id: 6,
     slug: "saas-mvp-launch",
     project: "LaunchKit",
-    title: "Turn a product idea into software people can actually use",
+    title: "Taking a SaaS idea to a working first release",
     description:
-      "Build the essential user journey first, then launch with the foundations needed to learn and grow.",
+      "I built an MVP with the main user journey, accounts, and backend needed to test a product idea.",
     category: "Web Apps & SaaS",
     technologies: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Stripe"],
     image: CaseStudy06ImageA,
@@ -1083,24 +907,24 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
 
     detail: {
       eyebrow: "Web Apps & SaaS",
-      heroTitle: "Turn a product idea into software people can actually use",
+      heroTitle: "Taking a SaaS idea to a working first release",
       heroDescription:
-        "Build the essential user journey first, then launch with the foundations needed to learn and grow.",
+        "I built an MVP with the main user journey, accounts, and backend needed to test a product idea.",
       atAGlance: {
         problem:
-          "Founders have a product concept but need a usable first release without overbuilding.",
+          "A product idea needed a usable first version without spending time on every possible feature.",
         solution:
-          "An end-to-end MVP covering the main customer workflow, authentication, data model, and production release.",
+          "I built a focused SaaS MVP covering accounts, core screens, APIs, and the data model.",
         outcome:
-          "Turned a product concept into a functional SaaS MVP with authentication, core workflows, and a foundation for future growth.",
+          "The project demonstrates a working first-version product with its core user flows connected.",
       },
       challenge: {
-        heading: "What was getting in the way?",
-        body: "Founders have a product concept but need a usable first release without overbuilding.",
+        heading: "The problem",
+        body: "The first release needed to do the essential job well without becoming a long list of untested features.",
       },
       solution: {
-        heading: "What did I build?",
-        body: "An end-to-end MVP covering the main customer workflow, authentication, data model, and production release.",
+        heading: "What I built",
+        body: "I built a focused SaaS MVP covering accounts, core screens, APIs, and the data model.",
       },
       capabilities: {
         heading: "What the system handles",
@@ -1143,69 +967,55 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
         ],
       },
       businessValue: {
-        heading: "Why this matters",
+        heading: "Why it matters",
         items: [
-          "A testable product in users’ hands",
-          "Lower risk of building unused features",
-          "A foundation for future iterations",
+          "A usable first version to evaluate",
+          "Core workflows built before extras",
+          "A foundation for future releases",
         ],
       },
       implementation: {
-        heading: "How I approached it",
-        body: "I developed a complete SaaS MVP with secure authentication, core product features, and a scalable backend, focusing on faster launches, lower development costs, and future growth.",
+        heading: "How I built it",
+        body: "I focused the scope on the main user journey, then built the frontend, backend, database, and account flows. I included deployment and monitoring foundations for later iterations.",
         technicalFocus: ["Next.js", "TypeScript", "Node.js", "PostgreSQL"],
       },
       proof: {
-        heading: "See it in action",
+        heading: "Inside the project",
         screenshots: [
           {
-            heading: "From Product Idea to Working SaaS",
+            heading: "Core product screens and main workflow",
             screenshot: CaseStudy06ImageB,
           },
           {
-            heading: "A Seamless Experience from Sign-Up to Success",
+            heading: "Account creation and onboarding flow",
             screenshot: CaseStudy06ImageC,
           },
         ],
       },
       results: {
-        heading: "What changed?",
-        verifiedMetrics: [
-          {
-            value: "100%",
-            label: "Core MVP features delivered",
-          },
-          {
-            value: "1",
-            label: "Launch-ready product",
-          },
-          {
-            value: "3",
-            label: "Core systems integrated",
-          },
-        ],
-        verifiedOutcome:
-          "Turned a product concept into a functional SaaS MVP with authentication, core workflows, and a foundation for future growth.",
+        heading: "What works now",
+        verifiedMetrics: [],
+        verifiedOutcome: null,
         measurementNotes:
-          "Metrics reflect implementation scope and should be confirmed against completed features, integration tests, and deployment records.",
+          "No verified performance or client-impact metrics are available for publication. The screenshots show implemented workflows, not measured business results.",
         fallbackCopy:
-          "LaunchKit demonstrates a functional SaaS MVP built for product validation, reliable operations, and future expansion.",
+          "The project demonstrates a working first-version product with its core user flows connected.",
       },
       faq: [
         {
-          question: "Can you build an MVP that we can launch and improve?",
+          question: "Does an MVP need every planned feature?",
           answer:
-            "Yes. Start with a narrow feature set, reliable core flows, analytics, and a deployment plan that supports iteration.",
+            "No. I would prioritize the smallest set of features needed to test the main user journey.",
         },
         {
-          question: "Will this work with our existing tools?",
+          question: "Can payments be included?",
           answer:
-            "That depends on available APIs, access permissions, data quality, and workflow rules. I would check those before committing to a specific integration.",
+            "Yes, when payments are part of the initial scope and the provider supports the business requirements.",
         },
         {
-          question: "What would you need from us to get started?",
+          question: "What happens after the first release?",
           answer:
-            "A short walkthrough of the current process, the tools involved, the main bottleneck, and what success would look like.",
+            "Usage, feedback, and errors should guide the next set of changes.",
         },
       ],
     },
@@ -1213,7 +1023,7 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
     seo: {
       title: "SaaS MVP Development from Idea to Launch | Syed Hassan Ali",
       description:
-        "Build the essential user journey first, then launch with the foundations needed to learn and grow.",
+        "I built an MVP with the main user journey, accounts, and backend needed to test a product idea.",
       keywords: [
         "build SaaS MVP",
         "startup MVP developer",
@@ -1233,9 +1043,9 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
     id: 7,
     slug: "crm-api-integration",
     project: "SyncLayer",
-    title: "Make your CRM and business apps stay in sync",
+    title: "Keeping customer data consistent across apps",
     description:
-      "Connect customer records, updates, and events across systems without constant CSV exports.",
+      "I built an integration that syncs selected customer records and makes failed updates easier to investigate.",
     category: "Backend & Cloud",
     technologies: ["Node.js", "REST APIs", "Webhooks", "PostgreSQL", "n8n"],
     image: CaseStudy07ImageA,
@@ -1243,24 +1053,24 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
 
     detail: {
       eyebrow: "Backend & Cloud",
-      heroTitle: "Make your CRM and business apps stay in sync",
+      heroTitle: "Keeping customer data consistent across apps",
       heroDescription:
-        "Connect customer records, updates, and events across systems without constant CSV exports.",
+        "I built an integration that syncs selected customer records and makes failed updates easier to investigate.",
       atAGlance: {
         problem:
-          "Customer data lives in multiple systems, updates arrive late, and teams work from conflicting records.",
+          "Customer details were stored in different systems, and manual updates left records out of sync.",
         solution:
-          "An API and webhook integration layer that keeps defined records consistent across selected business tools.",
+          "I built an API integration layer with field mapping, sync rules, and failure handling.",
         outcome:
-          "Customer records stay synchronized across connected systems, reducing manual updates and keeping teams working with consistent information.",
+          "The integration demonstrates record updates across connected systems, with logs and retry handling.",
       },
       challenge: {
-        heading: "What was getting in the way?",
-        body: "Customer data lives in multiple systems, updates arrive late, and teams work from conflicting records.",
+        heading: "The problem",
+        body: "When different apps hold different versions of a customer record, teams cannot always tell which one is current.",
       },
       solution: {
-        heading: "What did I build?",
-        body: "An API and webhook integration layer that keeps defined records consistent across selected business tools.",
+        heading: "What I built",
+        body: "I built an API integration layer with field mapping, sync rules, and failure handling.",
       },
       capabilities: {
         heading: "What the system handles",
@@ -1303,69 +1113,55 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
         ],
       },
       businessValue: {
-        heading: "Why this matters",
+        heading: "Why it matters",
         items: [
-          "Fewer conflicting customer records",
-          "Less manual import/export work",
-          "More reliable downstream workflows",
+          "Less manual importing and exporting",
+          "Clearer rules for record ownership",
+          "Sync failures visible for investigation",
         ],
       },
       implementation: {
-        heading: "How I approached it",
-        body: "I connected CRMs and business applications using APIs and webhooks to automate data updates, prevent inconsistencies, and eliminate repetitive manual transfers.",
+        heading: "How I built it",
+        body: "I defined which system owns each field, mapped the records, and handled webhook and scheduled updates. Duplicate prevention and retry logs make synchronization easier to maintain.",
         technicalFocus: ["Node.js", "REST APIs", "Webhooks", "PostgreSQL"],
       },
       proof: {
-        heading: "See it in action",
+        heading: "Inside the project",
         screenshots: [
           {
-            heading: "Keep Your Business Systems Connected",
+            heading: "Connected systems and sync activity",
             screenshot: CaseStudy07ImageB,
           },
           {
-            heading: "Track Data Syncs and Resolve Failures",
+            heading: "Sync history, retries, and errors",
             screenshot: CaseStudy07ImageC,
           },
         ],
       },
       results: {
-        heading: "What changed?",
-        verifiedMetrics: [
-          {
-            value: "100%",
-            label: "Test records synchronized",
-          },
-          {
-            value: "< 5s",
-            label: "Average sync processing time",
-          },
-          {
-            value: "100%",
-            label: "Test updates automated",
-          },
-        ],
-        verifiedOutcome:
-          "Customer records stay synchronized across connected systems, reducing manual updates and keeping teams working with consistent information.",
+        heading: "What works now",
+        verifiedMetrics: [],
+        verifiedOutcome: null,
         measurementNotes:
-          "Illustrative targets for controlled integration tests. Synchronization success and processing time must be verified using execution logs before publication.",
+          "No verified performance or client-impact metrics are available for publication. The screenshots show implemented workflows, not measured business results.",
         fallbackCopy:
-          "SyncLayer automates customer data synchronization across connected business applications, reducing manual work and improving data consistency.",
+          "The integration demonstrates record updates across connected systems, with logs and retry handling.",
       },
       faq: [
         {
-          question: "Can you make our CRM talk to our other tools?",
+          question: "Which system becomes the source of truth?",
           answer:
-            "Yes. The integration can synchronize approved fields, handle conflicts, and retry failures without duplicating records.",
+            "That depends on the data. I define ownership rules for each record or field before building the sync.",
         },
         {
-          question: "Will this work with our existing tools?",
+          question: "What happens if both apps change a record?",
           answer:
-            "That depends on available APIs, access permissions, data quality, and workflow rules. I would check those before committing to a specific integration.",
+            "The integration needs explicit conflict rules rather than silently overwriting data.",
         },
         {
-          question: "What would you need from us to get started?",
+          question: "Can it sync with our CRM?",
           answer:
-            "A short walkthrough of the current process, the tools involved, the main bottleneck, and what success would look like.",
+            "I would first check the CRM API, permissions, rate limits, and fields that need to stay aligned.",
         },
       ],
     },
@@ -1373,7 +1169,7 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
     seo: {
       title: "CRM & Third-Party API Integration | Syed Hassan Ali",
       description:
-        "Connect customer records, updates, and events across systems without constant CSV exports.",
+        "I built an integration that syncs selected customer records and makes failed updates easier to investigate.",
       keywords: [
         "CRM API integration",
         "HubSpot integration developer",
@@ -1393,9 +1189,9 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
     id: 8,
     slug: "booking-reminder-automation",
     project: "BookPilot",
-    title: "Let customers book without endless messages",
+    title: "Making appointments easier to manage",
     description:
-      "Make appointments easier to schedule, confirm, reschedule, and follow up on automatically.",
+      "I connected booking, calendars, confirmations, and reminders to reduce scheduling back-and-forth.",
     category: "AI & Automation",
     technologies: [
       "n8n",
@@ -1409,24 +1205,24 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
 
     detail: {
       eyebrow: "AI & Automation",
-      heroTitle: "Let customers book without endless messages",
+      heroTitle: "Making appointments easier to manage",
       heroDescription:
-        "Make appointments easier to schedule, confirm, reschedule, and follow up on automatically.",
+        "I connected booking, calendars, confirmations, and reminders to reduce scheduling back-and-forth.",
       atAGlance: {
         problem:
-          "Staff coordinate appointments manually, chase confirmations, and handle avoidable scheduling confusion.",
+          "Staff were coordinating appointments through messages and manually sending confirmations and reminders.",
         solution:
-          "An appointment workflow that synchronizes availability, bookings, reminders, and post-visit follow-up.",
+          "I built a booking workflow that checks availability, records appointments, and handles changes and reminders.",
         outcome:
-          "Customers can book, reschedule, and receive reminders automatically, reducing manual coordination and making appointment management easier.",
+          "The workflow demonstrates booking, rescheduling, cancellation, and reminder handling in one process.",
       },
       challenge: {
-        heading: "What was getting in the way?",
-        body: "Staff coordinate appointments manually, chase confirmations, and handle avoidable scheduling confusion.",
+        heading: "The problem",
+        body: "Scheduling becomes harder when availability changes, customers reschedule, and reminders depend on someone remembering to send them.",
       },
       solution: {
-        heading: "What did I build?",
-        body: "An appointment workflow that synchronizes availability, bookings, reminders, and post-visit follow-up.",
+        heading: "What I built",
+        body: "I built a booking workflow that checks availability, records appointments, and handles changes and reminders.",
       },
       capabilities: {
         heading: "What the system handles",
@@ -1469,78 +1265,63 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
         ],
       },
       businessValue: {
-        heading: "Why this matters",
+        heading: "Why it matters",
         items: [
-          "Less scheduling back-and-forth",
-          "Clearer booking communication",
-          "More consistent reminders",
+          "Fewer manual confirmation messages",
+          "Booking changes tracked centrally",
+          "Reminders handled by the workflow",
         ],
       },
       implementation: {
-        heading: "How I approached it",
-        body: "I connected online booking, calendar availability, and automated reminders into one system that reduces scheduling work, prevents double bookings, and keeps customers informed.",
+        heading: "How I built it",
+        body: "I connected the booking form to calendar availability and notification workflows. Validation checks help avoid conflicting reservations, while change events update the booking record.",
         technicalFocus: ["n8n", "Calendar APIs", "Next.js", "Email APIs"],
       },
       proof: {
-        heading: "See it in action",
+        heading: "Inside the project",
         screenshots: [
           {
-            heading: "Book Appointments in Just a Few Clicks",
+            heading: "Customer booking journey",
             screenshot: CaseStudy08ImageB,
           },
           {
-            heading: "Keep Calendars Synced and Avoid Double Bookings",
+            heading: "Calendar availability and synchronization",
             screenshot: CaseStudy08ImageC,
           },
           {
-            heading: "Automated Reminders and Easy Cancellations",
+            heading: "Reminder and cancellation messages",
             screenshot: CaseStudy08ImageD,
           },
           {
-            heading: "Reliable Scheduling Without Conflicts",
+            heading: "Time-zone and duplicate-booking checks",
             screenshot: CaseStudy08ImageE,
           },
         ],
       },
       results: {
-        heading: "What changed?",
-        verifiedMetrics: [
-          {
-            value: "24/7",
-            label: "Online booking availability",
-          },
-          {
-            value: "100%",
-            label: "Test confirmations automated",
-          },
-          {
-            value: "< 5s",
-            label: "Booking processing time",
-          },
-        ],
-        verifiedOutcome:
-          "Customers can book, reschedule, and receive reminders automatically, reducing manual coordination and making appointment management easier.",
+        heading: "What works now",
+        verifiedMetrics: [],
+        verifiedOutcome: null,
         measurementNotes:
-          "Illustrative performance targets. Confirmation automation and processing speed require validation through controlled booking tests.",
+          "No verified performance or client-impact metrics are available for publication. The screenshots show implemented workflows, not measured business results.",
         fallbackCopy:
-          "BookPilot automates appointment scheduling, confirmations, reminders, and cancellations to reduce administrative work.",
+          "The workflow demonstrates booking, rescheduling, cancellation, and reminder handling in one process.",
       },
       faq: [
         {
-          question:
-            "Can customers book a slot and get reminders automatically?",
+          question: "Can customers change their booking?",
           answer:
-            "Yes. Availability, confirmation, reminders, rescheduling, and staff notifications can be connected in one workflow.",
+            "Yes. The workflow supports rescheduling and cancellation links with updated availability checks.",
         },
         {
-          question: "Will this work with our existing tools?",
+          question: "How are double bookings avoided?",
           answer:
-            "That depends on available APIs, access permissions, data quality, and workflow rules. I would check those before committing to a specific integration.",
+            "Availability is checked during reservation, with conflict handling needed for simultaneous requests.",
         },
         {
-          question: "What would you need from us to get started?",
+          question: "Will reminders use our existing calendar?",
           answer:
-            "A short walkthrough of the current process, the tools involved, the main bottleneck, and what success would look like.",
+            "That depends on the calendar provider and its available integration permissions.",
         },
       ],
     },
@@ -1548,7 +1329,7 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
     seo: {
       title: "Appointment Booking & Reminder Automation | Syed Hassan Ali",
       description:
-        "Make appointments easier to schedule, confirm, reschedule, and follow up on automatically.",
+        "I connected booking, calendars, confirmations, and reminders to reduce scheduling back-and-forth.",
       keywords: [
         "appointment booking automation",
         "n8n appointment reminders",
@@ -1564,3 +1345,27 @@ export const CaseStudyData: readonly ICaseStudyDetail[] = [
     ],
   },
 ];
+
+export const CaseStudiesData: readonly ICaseStudy[] = CaseStudyData.map(
+  ({
+    id,
+    slug,
+    project,
+    title,
+    description,
+    category,
+    technologies,
+    image,
+    featured,
+  }) => ({
+    id,
+    slug,
+    project,
+    title,
+    description,
+    category,
+    technologies,
+    image,
+    featured,
+  }),
+);

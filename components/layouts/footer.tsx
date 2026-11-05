@@ -33,7 +33,7 @@ function Footer() {
                     rel="noopener noreferrer"
                     aria-label={`${social.name} (opens in a new tab)`}
                     title={social.name}
-                    className="flex size-10 items-center justify-center rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    className="flex size-10 items-center justify-center rounded-lg transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] motion-safe:hover:-translate-y-1 motion-safe:focus-visible:-translate-y-1 motion-reduce:transition-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                   >
                     <Image src={social.icon} alt="" width={28} height={28} className="size-7 object-contain" />
                   </a>
@@ -55,9 +55,10 @@ function Footer() {
                 <li key={href}>
                   <a
                     href={href.startsWith("#") ? `/${href}` : href}
-                    className="inline-block py-2 text-sm font-medium text-dth-heading decoration-white underline-offset-8 transition-colors hover:text-white hover:underline sm:text-base"
+                    className="group/nav relative inline-block py-2 text-sm font-medium text-dth-heading sm:text-base"
                   >
                     {label}
+                    <span aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 rounded-full bg-[#FFCE00] transition-transform duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover/nav:scale-x-100 group-focus-visible/nav:scale-x-100 motion-reduce:transition-none" />
                   </a>
                 </li>
               ))}

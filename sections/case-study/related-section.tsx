@@ -1,13 +1,13 @@
 import ResponsiveCardCarousel from "@/components/shared/responsive-card-carousel";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { CaseStudiesData, CaseStudyData, type ICaseStudyDetail } from "@/data/case-studies/case-studies-data";
+import { CaseStudiesData, type ICaseStudyDetail } from "@/data/case-studies/case-studies-data";
 import CaseStudyCard from "@/components/shared/case-study-card";
 import DetailSectionHeading from "./detail-section-heading";
 
 export default function RelatedSection({ study }: { study: ICaseStudyDetail }) {
   const related = study.relatedSlugs.flatMap((slug) => {
-    const match = CaseStudiesData.find((item) => item.slug === slug) || CaseStudyData.find((item) => item.slug === slug);
+    const match = CaseStudiesData.find((item) => item.slug === slug);
     return match && match.slug !== study.slug ? [match] : [];
   });
   const unavailable = study.relatedSlugs.filter((slug) => slug !== study.slug && !related.some((item) => item.slug === slug));
