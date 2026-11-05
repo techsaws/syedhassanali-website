@@ -1,23 +1,14 @@
-"use client";
-
 import Link from "next/link";
 
 import Image from "next/image";
 import { footerNavLinks } from "@/data/components.layout-data";
-import { ArrowUpRight } from "lucide-react";
-import { useGlobalContext } from "@/contexts/global-context";
 import { socialLinks } from "@/configs/social-links";
 
 function Footer() {
-  const { setConnectModal, setContactStep } = useGlobalContext();
-  const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim();
-  const phone = process.env.NEXT_PUBLIC_CONTACT_PHONE?.trim();
-  const contactClass = "group/contact relative inline-flex items-center gap-1.5 py-2 text-xs font-medium text-dth-foreground transition-colors hover:text-white focus-visible:text-white sm:text-sm";
-  const underline = <span aria-hidden="true" className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 rounded-full bg-white transition-transform duration-400 ease-out group-hover/contact:scale-x-100 group-focus-visible/contact:scale-x-100 motion-reduce:transition-none" />;
   return (
     <footer className="border-t border-dth-border bg-[#050505] text-dth-heading">
       <div className="page-layout">
-        <div className="flex flex-col gap-7 py-10 sm:py-12 max-md:gap-5 max-md:pt-8 max-md:pb-5 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
+        <div className="flex flex-col gap-7 pt-10 pb-6 sm:pt-12 sm:pb-7 max-md:gap-5 max-md:pt-8 lg:flex-row lg:items-end lg:justify-between lg:gap-10">
           <div className="min-w-0">
           <Link
             href="/"
@@ -53,7 +44,7 @@ function Footer() {
             </div>
         </div>
 
-        <div className="flex flex-col-reverse gap-6 max-md:items-center max-md:gap-4 max-md:text-center border-t border-dth-border/70 py-6 sm:py-7 lg:flex-row lg:items-end lg:justify-between lg:gap-8">
+        <div className="flex flex-col-reverse gap-6 max-md:items-center max-md:gap-4 max-md:text-center border-t border-dth-border/70 py-6 sm:py-7 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
           <p className="text-xs leading-relaxed text-dth-foreground sm:text-sm">
             &copy; 2026 Syed Hassan Ali. All rights reserved.
           </p>
@@ -74,13 +65,7 @@ function Footer() {
           </nav>
 
 
-          <nav aria-label="Footer contact links">
-            <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:gap-x-6">
-              {email && <li><a href={`mailto:${email}`} className={contactClass}>Email <ArrowUpRight aria-hidden="true" className="size-3.5" />{underline}</a></li>}
-              {phone && <li><a href={`tel:${phone.replace(/[^+\d]/g, "")}`} className={contactClass}>Call <ArrowUpRight aria-hidden="true" className="size-3.5" />{underline}</a></li>}
-              <li><button type="button" onClick={() => { setContactStep("resume"); setConnectModal(true); }} className={contactClass}>Download resume <ArrowUpRight aria-hidden="true" className="size-3.5" />{underline}</button></li>
-            </ul>
-          </nav>
+
           </div>
         </div>
       </div>
